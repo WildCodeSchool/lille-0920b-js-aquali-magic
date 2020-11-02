@@ -1,0 +1,70 @@
+.FirstDiv {
+  margin-bottom: -2vh;
+}
+
+.FirstSection {
+  background-image: url(https://images8.alphacoders.com/949/thumb-1920-949830.jpg);
+  height: 90vh;
+  background-position: center;
+}
+
+.FirstSection2 {
+  background-image: url(https://i.ibb.co/YcwdcWf/Zendikar-Rising-resize.png);
+  height: 23vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.SecondSection {
+  background-image: url(https://i.ibb.co/pQ9gkgW/zendikar-rising.png);
+  height: 100vh;
+}
+
+.Button {
+  text-align: center;
+}
+
+.Button :hover {
+  color: rgb(255, 123, 0);
+  transition: 0.5s;
+}
+
+.CartesHomepage {
+  display: flex;
+  justify-content: center;
+}
+.CartesHomepage li {
+  height: 10vh;
+  padding: 10vh 8vh 0 8vh;
+}
+
+.HistoireTxt {
+  padding-top: 10vh;
+  width: 100%;
+  text-align: center;
+}
+
+.HistoireTxt p {
+  font-size: 2vh;
+  text-align: center;
+  margin: 0 25% 0 25%;
+}
+
+.HistoireTxt h1 {
+  margin-bottom: 3vh;
+}
+
+.ButtonGrimoire {
+  margin-top: 40vh;
+  background-color: black;
+  border-radius: 30px;
+  height: 6vh;
+}
+
+.ContainerTxt {
+  text-align: -moz-center;
+}
