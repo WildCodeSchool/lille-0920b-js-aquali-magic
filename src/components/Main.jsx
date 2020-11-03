@@ -12,13 +12,12 @@ const A = styled.a`
 `;
 
 const ButtonGrimoire = styled.button`
-margin-top: 40vh;
+
 background-color: black;
 border-radius: 30px;
 height: 6vh;
 
 @media ${device.mobile}{
-  margin-top: 4vh;
   width : 30vh
 }
 
@@ -73,10 +72,11 @@ text-align: center;
 const DivTxtHistoire = styled.div`
   padding-top: 10vh;
   width: 100%;
-  text-align: center;
-  
+  text-align: center; 
 
- 
+  @media ${device.mobile}{
+    padding-top : 3vh
+  }
 `;
 
 const LiCards = styled.li`
@@ -148,12 +148,13 @@ const MainPage = () => {
                 />
               </LiCards>
             </UlCards>
-          </div>
-          <DivButton>
+            <DivButton>
             <ButtonGrimoire type="button">
               <A>Ouvrir le grimoire de Zendikar</A>
             </ButtonGrimoire>
-          </DivButton>
+            </DivButton>
+          </div>
+          
         </DivSecondSection>
       </section>
     </div>
