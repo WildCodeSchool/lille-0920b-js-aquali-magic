@@ -1,9 +1,11 @@
 const CardItem = ({ name, imageUrl, text }) => {
   return (
-    <div className="card text-center">
-      <img src={imageUrl} alt="card" style={{ width: '6Opx' }} />
-      <h3 className="card-name">{name}</h3>
-      <p className="card-text">{text} </p>
+    <div className="card ">
+      <img src={imageUrl} alt="card" />
+      <div className="info">
+        <h1>{name}</h1>
+        <p>{text} </p>
+      </div>
     </div>
   );
 };
