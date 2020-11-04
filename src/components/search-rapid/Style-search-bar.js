@@ -180,6 +180,7 @@ export const FlipBack = styled.div`
     height: 110px;
     margin: 10px auto;
     h1 {
+      margin: 8px auto;
       font-size: 9px;
     }
     p {

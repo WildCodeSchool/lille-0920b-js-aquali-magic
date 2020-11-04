@@ -9,7 +9,7 @@ const CardList = ({ cards }) => {
           return i < 5;
         })
         .map((card) => {
-          if (card.foreignNames.length === 0 && !card.manaCost) {
+          if (card.foreignNames.length === 0 || !card.manaCost || !card.imageUrl) {
             return null;
           }
           return <CardItem key={card.id} {...card} />;
