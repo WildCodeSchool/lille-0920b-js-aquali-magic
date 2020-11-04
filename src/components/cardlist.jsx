@@ -9,7 +9,7 @@ const CardList = ({ cards }) => {
           return i < 5;
         })
         .map((card) => {
-          if (card.foreignNames.length === 0) {
+          if (card.foreignNames.length === 0 && !card.manaCost) {
             return null;
           }
           return <CardItem key={card.id} {...card} />;

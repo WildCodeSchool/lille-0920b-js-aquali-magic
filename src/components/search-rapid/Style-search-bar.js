@@ -163,12 +163,17 @@ export const FlipBack = styled.div`
   /* border-radius: 0.5rem; */
 
   h1 {
-    margin: 0px;
+    margin: 20px auto;
+  }
+  h3 {
+    font-size: 20px;
+    color: red;
   }
   p {
     letter-spacing: 1px;
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 8px;
+    opacity: 0.7;
   }
   @media ${device.mobile} {
     width: 80px;
@@ -181,6 +186,10 @@ export const FlipBack = styled.div`
       letter-spacing: 0.4px;
       font-size: 5px;
       margin-top: 6px;
+    }
+    h3 {
+      font-size: 7px;
+      color: red;
     }
   }
 `;
