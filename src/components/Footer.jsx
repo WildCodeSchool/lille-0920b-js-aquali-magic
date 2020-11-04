@@ -15,7 +15,7 @@ const FooterContainer = styled.div`
   width: 100wv;
   height: 25vh;
   @media ${device.mobile}{
-    height: 8vh;
+    height: 15vh;
   }
 `;
 const Container1 = styled.div`
@@ -83,7 +83,11 @@ const Icones = styled.div`
    display: flex;
    flex-direction: row;
    justify-content: space-between;
+   @media ${device.mobile}{
+    width: 200%;
    
+
+  }
 
 `;
 const Lieux = styled.div`
