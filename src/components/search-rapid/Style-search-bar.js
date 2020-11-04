@@ -194,3 +194,17 @@ export const FlipBack = styled.div`
     }
   }
 `;
+//Spinner
+export const Loading = styled.div`
+  img {
+    width: 60px;
+    margin: 20px auto;
+    display: block;
+  }
+  @media ${device.mobile} {
+    img {
+      width: 30px;
+      margin: 10px auto;
+      display: block;
+  }
+`;

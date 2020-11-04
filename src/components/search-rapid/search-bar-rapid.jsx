@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import CardList from "../cardlist";
+import Spinner from "./spinner";
 import { SearchContainer, CardsContainer, Button, Input } from "./Style-search-bar";
 
 class SearchBarRapid extends React.Component {
@@ -9,18 +10,21 @@ class SearchBarRapid extends React.Component {
     this.state = {
       cards: [],
       text: "",
+      loading: false,
     };
   }
 
   searchCard = async (text) => {
+    this.setState({ loading: true });
     const res = await axios.get(`https://api.magicthegathering.io/v1/cards?name=${text}`);
-    this.setState({ cards: res.data.cards });
+    this.setState({ cards: res.data.cards, loading: false });
   };
 
   //  clear cards
   clearCards = () =>
     this.setState({
       cards: [],
+      loading: false,
     });
 
   onChange = (e) => this.setState({ text: e.target.value });
@@ -32,7 +36,7 @@ class SearchBarRapid extends React.Component {
   };
 
   render() {
-    const { cards, text } = this.state;
+    const { cards, text, loading } = this.state;
     return (
       <SearchContainer>
         <CardsContainer>
@@ -46,9 +50,7 @@ class SearchBarRapid extends React.Component {
               </Button>
             )}
           </div>
-          <div>
-            <CardList cards={cards} />
-          </div>
+          <div>{loading ? <Spinner /> : <CardList cards={cards} />}</div>
         </CardsContainer>
       </SearchContainer>
     );
