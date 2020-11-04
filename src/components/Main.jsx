@@ -76,9 +76,12 @@ const DivSecondSection = styled.div`
 const DivButton = styled.div`
 
 text-align: center;
-margin-top: 37vh
+margin-top: 37vh;
+
 @media ${device.mobile}{
+ margin-top : 2vh;
 }
+
 `;
 
 const DivTxtHistoire = styled.div`

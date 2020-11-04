@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 const Page = styled.div`
  color : white;
+ margin : -8px;
 `
 
 function App() {
