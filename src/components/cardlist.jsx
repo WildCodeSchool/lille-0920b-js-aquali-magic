@@ -1,12 +1,5 @@
 import CardItem from "./carditem";
-import styled from "styled-components";
-
-const Cards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
-  justify-items: center;
-`;
+import { Cards } from "./search-rapid/Style-search-bar";
 
 const CardList = ({ cards }) => {
   return (

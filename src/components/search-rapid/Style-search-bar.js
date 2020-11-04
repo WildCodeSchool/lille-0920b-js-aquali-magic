@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../Device";
 
 export const SearchContainer = styled.div`
   background-color: #15021b;
@@ -9,6 +10,9 @@ export const CardsContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
+  @media ${device.mobile} {
+    max-width: 400px;
+  }
 `;
 export const Button = styled.button`
   transition: all 0.5s ease;
@@ -26,6 +30,13 @@ export const Button = styled.button`
   &:hover {
     color: #001f3f;
     background-color: #fff;
+  }
+  @media ${device.mobile} {
+    font-size: 10px;
+    margin-left: 155px;
+    width: 80px;
+    height: 20px;
+    line-height: 0;
   }
 `;
 
@@ -47,6 +58,11 @@ export const Input = styled.input`
   &:hover {
     color: #001f3f;
     background-color: #fff;
+  }
+  @media ${device.mobile} {
+    width: 200px;
+    height: 25px;
+    font-size: 12px;
   }
 `;
 
@@ -101,6 +117,11 @@ export const Card = styled.div`
     left: 0;
     border-radius: 15px;
   }
+  @media ${device.mobile} {
+    width: 70px;
+    height: 110px;
+    margin: 10px auto;
+  }
 `;
 export const Info = styled.div`
   position: relative;
@@ -116,5 +137,28 @@ export const Info = styled.div`
   }
   h1 {
     margin: 0px;
+  }
+  @media ${device.mobile} {
+    p {
+      letter-spacing: 0.4px;
+      font-size: 6px;
+      margin-top: 4px;
+    }
+    h1 {
+      margin: 0px;
+      font-size: 9px;
+    }
+  }
+`;
+
+// cardlist
+export const Cards = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3.8rem;
+  justify-items: center;
+  @media ${device.mobile} {
+    grid-template-columns: repeat(auto-fit, 80px);
+    margin-buttom: 10px;
   }
 `;
