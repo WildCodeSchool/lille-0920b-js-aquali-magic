@@ -60,6 +60,10 @@ export const Input = styled.input`
     color: #001f3f;
     background-color: #fff;
   }
+  ::placeholder {
+    color: white;
+    opacity: 0.6;
+  }
   @media ${device.mobile} {
     width: 200px;
     height: 25px;
