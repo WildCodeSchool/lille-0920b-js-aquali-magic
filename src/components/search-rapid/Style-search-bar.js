@@ -119,7 +119,7 @@ export const FlipFront = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background-color: #15021b;
   color: #fff;
   /* border-radius: 0.5rem; */
 
