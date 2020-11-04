@@ -1,8 +1,8 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import Sidebar from './Sidebar.css';
+import "./Sidebar.css";
 
-export default props => {
+ const Slidebar=(props) => {
   return (
     <Menu>
       <a className="menu-item" href="/">
@@ -23,3 +23,5 @@ export default props => {
     </Menu>
   );
 };
+
+export default Slidebar;

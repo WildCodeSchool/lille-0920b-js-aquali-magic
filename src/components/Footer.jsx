@@ -16,7 +16,7 @@ const FooterContainer = styled.div`
   height: 25vh;
 
   @media ${device.mobile}{
-    height: 15vh;
+    height: 17vh;
   }
 `;
 const Container1 = styled.div`

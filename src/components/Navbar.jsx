@@ -95,7 +95,7 @@ const Navbar = () => {
           <A href="#e">Booster</A>
         </Li>
       </Ul>
-      <Burger className="App" id="outer-container" height='200000px'>
+      <Burger className="App" id="outer-container" >
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
       </Burger>
     </NavigationBar>

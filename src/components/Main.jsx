@@ -40,7 +40,7 @@ const DivFirstSection1 = styled.div`
 
 
   @media ${device.mobile}{
-    height :30vh;
+    height :38vh;
     background-position: center;
     background-size: cover;
   }
@@ -67,7 +67,7 @@ const DivSecondSection = styled.div`
   height: 100vh;
 
   @media ${device.mobile}{
-    height :30vh;
+    height :35vh;
     background-position: center;
     background-size: cover;
   }
@@ -120,6 +120,7 @@ const MainPage = () => {
     <All>
       <section>
         <DivFirstSection1></DivFirstSection1>
+        
         <DivFirstSection2></DivFirstSection2>
       </section>
       <section>
