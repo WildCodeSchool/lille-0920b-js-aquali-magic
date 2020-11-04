@@ -10,7 +10,7 @@ const NavigationBar = styled.nav`
   justify-content: space-between;
 
   @media ${device.mobile}{
-    height: 8vh;
+    height: 10vh;
   }
 `;
 
@@ -51,8 +51,8 @@ const Logo = styled.img`
   height: 8vh;
 
   @media ${device.mobile}{
-    width: 35vw;
-    height: 17vw
+    width: 20vh;
+    height: 10vh;
   }
 `
 
@@ -95,7 +95,7 @@ const Navbar = () => {
           <A href="#e">Booster</A>
         </Li>
       </Ul>
-      <Burger className="App" id="outer-container">
+      <Burger className="App" id="outer-container" height='200000px'>
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
       </Burger>
     </NavigationBar>

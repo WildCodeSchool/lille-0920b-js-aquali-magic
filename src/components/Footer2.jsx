@@ -1,3 +1,4 @@
+/*
 import {device} from "./Device.jsx";
 import styled from 'styled-components';
 
@@ -166,3 +167,5 @@ const Footer2 = () => {
 
 
 export default Footer2;
+
+*/
