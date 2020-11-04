@@ -5,7 +5,10 @@ export const SearchContainer = styled.div`
   background-color: #15021b;
 `;
 export const CardsContainer = styled.div`
-  max-width: 1800px;
+  overflow: hidden;
+  max-width: 100%;
+  padding-top: 5vh;
+  border-bottom: 2px solid white;
   display: flex;
   justify-content: center;
   flex-direction: column;
