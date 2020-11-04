@@ -1,13 +1,16 @@
-import { Card, Info } from "./search-rapid/Style-search-bar";
+import { Card, FlipBack, FlipFront } from "./search-rapid/Style-search-bar";
 
 const CardItem = ({ name, imageUrl, text }) => {
   return (
     <Card>
-      <img src={imageUrl} alt="card" />
-      <Info className="info">
+      <FlipFront>
+        <img src={imageUrl} alt="card" />
+      </FlipFront>
+
+      <FlipBack className="info">
         <h1>{name}</h1>
         <p>{text} </p>
-      </Info>
+      </FlipBack>
     </Card>
   );
 };
