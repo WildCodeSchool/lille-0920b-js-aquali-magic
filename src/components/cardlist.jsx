@@ -1,8 +1,9 @@
-import CardItem from './carditem';
+import CardItem from "./carditem";
+import { Cards } from "./search-rapid/Style-search-bar";
 
 const CardList = ({ cards }) => {
   return (
-    <div className="cards">
+    <Cards>
       {cards
         .filter((card, i) => {
           return i < 5;
@@ -13,7 +14,7 @@ const CardList = ({ cards }) => {
           }
           return <CardItem key={card.id} {...card} />;
         })}
-    </div>
+    </Cards>
   );
 };
 

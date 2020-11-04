@@ -1,18 +1,7 @@
 import React from "react";
 import axios from "axios";
 import CardList from "../cardlist";
-import "./search-bar-rapid.scss";
-import {device} from "../Device.jsx";
-import styled from 'styled-components';
-
-const Test = styled.div`
-  @media ${device.mobile}{
-    overflow: hidden;
-    display: none;
-  }
-`
-
-
+import { SearchContainer, CardsContainer, Button, Input } from "./Style-search-bar";
 
 class SearchBarRapid extends React.Component {
   constructor() {
@@ -45,23 +34,23 @@ class SearchBarRapid extends React.Component {
   render() {
     const { cards, text } = this.state;
     return (
-      <Test className="search-container">
-        <div className="cards-container">
+      <SearchContainer>
+        <CardsContainer>
           <div>
-            <form className="search-rapid" onSubmit={this.onSubmit}>
-              <input type="text" name="text" placeholder=" Rapid Card Search..." value={text} onChange={this.onChange} />
+            <form onSubmit={this.onSubmit}>
+              <Input type="text" name="text" placeholder=" Rapid Card Search..." value={text} onChange={this.onChange} />
             </form>
             {cards.length > 0 && (
-              <button type="button" className="btn-clear" onClick={this.clearCards}>
+              <Button type="button" onClick={this.clearCards}>
                 Clear
-              </button>
+              </Button>
             )}
           </div>
           <div>
             <CardList cards={cards} />
           </div>
-        </div>
-      </Test>
+        </CardsContainer>
+      </SearchContainer>
     );
   }
 }

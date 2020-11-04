@@ -1,12 +1,14 @@
+import { Card, Info } from "./search-rapid/Style-search-bar";
+
 const CardItem = ({ name, imageUrl, text }) => {
   return (
-    <div className="card ">
+    <Card>
       <img src={imageUrl} alt="card" />
-      <div className="info">
+      <Info className="info">
         <h1>{name}</h1>
         <p>{text} </p>
-      </div>
-    </div>
+      </Info>
+    </Card>
   );
 };
 export default CardItem;
