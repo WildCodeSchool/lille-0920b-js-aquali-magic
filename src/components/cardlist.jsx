@@ -1,8 +1,16 @@
-import CardItem from './carditem';
+import CardItem from "./carditem";
+import styled from "styled-components";
+
+const Cards = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  justify-items: center;
+`;
 
 const CardList = ({ cards }) => {
   return (
-    <div className="cards">
+    <Cards>
       {cards
         .filter((card, i) => {
           return i < 5;
@@ -13,7 +21,7 @@ const CardList = ({ cards }) => {
           }
           return <CardItem key={card.id} {...card} />;
         })}
-    </div>
+    </Cards>
   );
 };
 
