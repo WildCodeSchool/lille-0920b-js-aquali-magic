@@ -76,6 +76,7 @@ const DivSecondSection = styled.div`
 const DivButton = styled.div`
 
 text-align: center;
+margin-top: 37vh
 `;
 
 const DivTxtHistoire = styled.div`
@@ -90,7 +91,7 @@ const DivTxtHistoire = styled.div`
 
 const LiCards = styled.li`
   height: 10vh;
-  padding: 10vh 8vh 0 8vh;
+  padding: 10vh 13vh 0 8vh;
   list-style : none;
   
   @media ${device.mobile}{
@@ -113,8 +114,8 @@ const MainPage = () => {
   return (
     <All>
       <section>
-        <DivFirstSection1>Aléatoire</DivFirstSection1>
-        <DivFirstSection2>Aléatoire</DivFirstSection2>
+        <DivFirstSection1></DivFirstSection1>
+        <DivFirstSection2></DivFirstSection2>
       </section>
       <section>
         <DivSecondSection>
