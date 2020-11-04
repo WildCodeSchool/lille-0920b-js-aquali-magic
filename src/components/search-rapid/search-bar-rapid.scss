@@ -3,11 +3,12 @@
 }
 
 .cards-container {
-  max-width: 1800px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
+  border-bottom: 2px solid white;
 }
 
 .text-center {

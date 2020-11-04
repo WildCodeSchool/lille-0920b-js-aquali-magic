@@ -1,16 +1,3 @@
-.Footer-container {
-  background-color: #262626;
-  width: 100%;
-  height: 25vh;
-}
-
-.container1 {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid white;
-  height: 17vh;
-}
-
 .container2 ul {
   display: flex;
   flex-direction: row;

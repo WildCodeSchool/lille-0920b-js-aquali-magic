@@ -1,6 +1,16 @@
 import {device} from "./Device.jsx";
 import styled from 'styled-components';
 
+const All = styled.div`
+  margin: 0;
+  padding: 0;
+
+
+  @media ${device.mobile}{
+    overflow: hidden;
+  }
+`
+
 
 const A = styled.a`
   color :white;
@@ -101,7 +111,7 @@ justify-content: center;
 
 const MainPage = () => {
   return (
-    <div>
+    <All>
       <section>
         <DivFirstSection1>Aléatoire</DivFirstSection1>
         <DivFirstSection2>Aléatoire</DivFirstSection2>
@@ -156,7 +166,7 @@ const MainPage = () => {
           
         </DivSecondSection>
       </section>
-    </div>
+    </All>
   );
 };
 

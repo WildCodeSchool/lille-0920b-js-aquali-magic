@@ -2,6 +2,17 @@ import React from "react";
 import axios from "axios";
 import CardList from "../cardlist";
 import "./search-bar-rapid.scss";
+import {device} from "../Device.jsx";
+import styled from 'styled-components';
+
+const Test = styled.div`
+  @media ${device.mobile}{
+    overflow: hidden;
+    display: none;
+  }
+`
+
+
 
 class SearchBarRapid extends React.Component {
   constructor() {
@@ -34,7 +45,7 @@ class SearchBarRapid extends React.Component {
   render() {
     const { cards, text } = this.state;
     return (
-      <div className="search-container">
+      <Test className="search-container">
         <div className="cards-container">
           <div>
             <form className="search-rapid" onSubmit={this.onSubmit}>
@@ -50,7 +61,7 @@ class SearchBarRapid extends React.Component {
             <CardList cards={cards} />
           </div>
         </div>
-      </div>
+      </Test>
     );
   }
 }
