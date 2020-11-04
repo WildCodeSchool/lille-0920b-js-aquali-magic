@@ -27,7 +27,7 @@ border-radius: 30px;
 height: 6vh;
 
 @media ${device.mobile}{
-  width : 30vh
+  width : 40vh;
 }
 
 `;
@@ -77,6 +77,8 @@ const DivButton = styled.div`
 
 text-align: center;
 margin-top: 37vh
+@media ${device.mobile}{
+}
 `;
 
 const DivTxtHistoire = styled.div`
