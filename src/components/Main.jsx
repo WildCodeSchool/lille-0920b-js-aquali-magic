@@ -52,7 +52,7 @@ const DivFirstSection2 = styled.div`
 `;
 
 const DivSecondSection = styled.div`
-  background-image: url(https://i.ibb.co/pQ9gkgW/zendikar-rising.png);
+  background-image: url("/image/zendikar-rising.png");
   height: 100vh;
   @media ${device.mobile}{
     height :35vh;
