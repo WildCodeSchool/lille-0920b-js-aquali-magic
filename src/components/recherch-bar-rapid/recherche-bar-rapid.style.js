@@ -9,7 +9,14 @@ export const SearchContainer = styled.div`
   }
 
   @media ${device.mobile} {
-    margin-right: 150px;
+    .input-container {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin-right: 180px;
+      margin-top: 10px;
+    }
   }
 `;
 export const Results = styled.div`
@@ -20,7 +27,8 @@ export const Results = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 
   @media ${device.mobile} {
-    margin-top: 25px;
+    margin-top: 5px;
+    max-width: 140px;
   }
 `;
 export const Result = styled.div`
@@ -50,18 +58,22 @@ export const Result = styled.div`
   }
   
   @media ${device.mobile} {
-    height: 50px;
-    width: 150px;
+    height: 25px;
+    width: 100%;
     border: 0.5px solid #666;
-    flex-wrap: wrap;
+    
   .result-image {
-    width: 30px;
-    margin-right: 5px;
+    display:none;
+    
   }
   .result-name {
     font-size: 12px;
+    text-align: center;
     font-family: Palatino, URW Palladio L, serif;
     flex: 1;
+  }
+  .card-name{
+    font-size: 9px;
   }
 `;
 
@@ -93,8 +105,8 @@ export const Input = styled.input`
     width: 120px;
     height: 20px;
     font-size: 10px;
-    margin-top: 15px;
-    margin-right: 170px;
+    // margin-top: 15px;
+    // margin-right: 200px;
   }
 `;
 
@@ -122,10 +134,12 @@ export const Button = styled.button`
     background-color: #fff;
   }
   @media ${device.mobile} {
-    font-size: 8px;
+    font-size: 6px;
     width: 50px;
-    height: 20px;
+    height: 5px;
     line-height: 0;
+    margin-top: 2px;
+    text-align: center;
   }
 `;
 
@@ -140,7 +154,7 @@ export const Loading = styled.div`
     img {
       width: 18px;
       margin-top: 5px;
-      margin-right: 230px;
+      margin-right: 240px;
       display: block;
   }
 `;
@@ -152,5 +166,9 @@ export const Mana = styled.div`
   flex-direction: row;
   img {
     width: 25px;
+  }
+  @media ${device.mobile} {
+    img {
+      display:none;
   }
 `;
