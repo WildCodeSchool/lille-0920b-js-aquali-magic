@@ -54,8 +54,10 @@ export const Details = styled.div`
   }
 `;
 export const Image = styled.div`
-  width: 20%;
-  height: 320px;
+  width: 22%;
+  img {
+    height: 380px;
+  }
 
   @media ${device.mobile} {
   }

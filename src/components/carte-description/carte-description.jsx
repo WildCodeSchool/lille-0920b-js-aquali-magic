@@ -16,7 +16,7 @@ const Card = ({
         </Image>
         <Info>
           <Mana>
-            Cost:&nbsp;
+            Mana Cost :&nbsp;
             {manaCost
               .replace(/\//g, "")
               .split(/((?!^)\{.*?\})/)
@@ -27,10 +27,10 @@ const Card = ({
           </Mana>
           <Line>
             <p>
-              CMC: <b>{cmc}</b>
+              Converted Mana Cost: <b>{cmc}</b>
             </p>
             <p>
-              Type: <b>{type}</b>
+              Types: <b>{type}</b>
             </p>
           </Line>
           <Line>
@@ -42,8 +42,10 @@ const Card = ({
             </p>
           </Line>
           <Text>
-            Text: <br />
-            {text}
+            Card Text : <br />
+            <i>
+              <b>{text}</b>
+            </i>
           </Text>
         </Info>
       </Details>
