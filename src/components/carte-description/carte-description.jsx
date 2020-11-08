@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { CardContainer, Name, Details, Image, Info, Mana, Text, Line } from "./carte-description.style";
 
 const Card = ({
@@ -15,7 +16,7 @@ const Card = ({
         </Image>
         <Info>
           <Mana>
-            Cost:{" "}
+            Cost:&nbsp;
             {manaCost
               .replace(/\//g, "")
               .split(/((?!^)\{.*?\})/)
@@ -46,6 +47,9 @@ const Card = ({
           </Text>
         </Info>
       </Details>
+      <Link to="/" className="btn">
+        Back To HomePage
+      </Link>
     </CardContainer>
   );
 };

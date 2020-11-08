@@ -9,12 +9,35 @@ export const CardContainer = styled.div`
   background-repeat: no-repeat;
   background-position: 0% 0%;
   background-size: 100% 100%;
+  .btn {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 50px;
+    transition: all 0.5s ease;
+    color: rgba(255, 255, 255, 0.6);
+    border: 3px solid #c4c4c4;
+    width: 140px;
+    height: 20px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 25px;
+    text-decoration: none;
+    &:hover {
+      color: #001f3f;
+      background-color: #fff;
+    }
+  }
   @media ${device.mobile} {
   }
 `;
 export const Name = styled.div`
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   font-family: "Arial Black", Gadget, sans-serif;
   padding-top: 15vh;
   color: white;
@@ -39,7 +62,7 @@ export const Image = styled.div`
 `;
 export const Info = styled.div`
   width: 20%;
-  height: 300px;
+  height: 350px;
   font-size: 16px;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -67,9 +90,9 @@ export const Text = styled.div`
     
 `;
 export const Line = styled.div`
-font-size: 16px;
+font-size: 14px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   
   @media ${device.mobile} {

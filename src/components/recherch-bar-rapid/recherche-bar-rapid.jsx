@@ -63,7 +63,7 @@ class RechercheBar extends React.Component {
                 if (card.foreignNames.length === 0 || !card.imageUrl || !card.manaCost) {
                   return null;
                 }
-                return <List key={card.id} {...card} />;
+                return <List key={card.id} {...card} clearCards={this.clearCards} />;
               })}
           </Results>
         )}
