@@ -105,8 +105,6 @@ export const Input = styled.input`
     width: 120px;
     height: 20px;
     font-size: 10px;
-    // margin-top: 15px;
-    // margin-right: 200px;
   }
 `;
 
