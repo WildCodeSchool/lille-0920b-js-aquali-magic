@@ -1,18 +1,24 @@
-import './App.css';
-import MainPage from './components/Main';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import MainPage from "./components/Main";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Card from "./components/carte-description/carte-description";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <div className="container">
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route path="/:name" component={Card} />
+        </Switch>
+
+        <Footer />
       </div>
-      <MainPage />
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

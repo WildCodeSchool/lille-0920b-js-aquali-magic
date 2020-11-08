@@ -1,29 +1,9 @@
 import React from "react";
 import axios from "axios";
 import Spinner from "./spinner";
+import List from "./List";
 
-import { SearchContainer, Results, Result, Input, Button, Mana } from "./recherche-bar-rapid.style";
-
-const List = ({ name, imageUrl, manaCost }) => (
-  <Result>
-    <div className="result-image">
-      <img alt="card" src={imageUrl} />
-    </div>
-    <div className="result-name">
-      <p className="card-name">{name}</p>
-
-      <Mana>
-        {manaCost
-          .replace(/\//g, "")
-          .split(/((?!^)\{.*?\})/)
-          .filter(Boolean)
-          .map((num) => (
-            <img src={`/image/mana-icons/${num}.png`} alt="icon" />
-          ))}
-      </Mana>
-    </div>
-  </Result>
-);
+import { SearchContainer, Results, Input, Button } from "./recherche-bar-rapid.style";
 
 class RechercheBar extends React.Component {
   constructor() {
@@ -71,7 +51,6 @@ class RechercheBar extends React.Component {
             <Input type="text" name="text" placeholder=" Rapid Card Search..." value={text} onChange={this.onChange} />
           </form>
         </div>
-
         {loading ? (
           <Spinner />
         ) : (
