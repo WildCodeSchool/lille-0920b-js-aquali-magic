@@ -18,6 +18,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={MainPage} />
         <Route path="/histoire" component={Histoire}/>
+        <Route exact path="/regles" component={Regles} />
+        <Route path="/creation" component={Cartes}/>
+        <Route path="/booster" component={Booster}/>
       </Switch>
       <div className="container">
       </div>
