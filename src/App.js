@@ -8,6 +8,9 @@ import MainPage from './components/Main';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Histoire from './components/Histoire';
+import Regles from './Regles';
+import Cartes from './components/Cartes';
+import Booster from './components/Booster';
 
 
 function App() {
