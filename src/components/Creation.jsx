@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Regles() {
+function Creation() {
     return(
         <div>
-            <h1>Histoire</h1>
+            <h1>Creation</h1>
         </div>
     )
 }
 
-export default Regles
+export default Creation

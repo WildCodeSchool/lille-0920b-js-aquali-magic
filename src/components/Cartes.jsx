@@ -3,7 +3,7 @@ import React from 'react';
 function Cartes() {
     return(
         <div>
-            <h1>Histoire</h1>
+            <h1>Cartes</h1>
         </div>
     )
 }

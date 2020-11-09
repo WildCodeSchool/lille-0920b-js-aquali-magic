@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Booster() {
+function Regles() {
     return(
         <div>
-            <h1>Booster</h1>
+            <h1>Règles</h1>
         </div>
     )
 }
 
-export default Booster
+export default Regles
