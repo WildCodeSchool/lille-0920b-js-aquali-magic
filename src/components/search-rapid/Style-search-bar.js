@@ -3,6 +3,8 @@ import { device } from "../Device";
 
 export const SearchContainer = styled.div`
   background-color: #15021b;
+  border-bottom: 2px solid white;
+  height: 14vh;
 `;
 export const CardsContainer = styled.div`
   max-width: 1800px;
