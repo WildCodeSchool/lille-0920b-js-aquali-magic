@@ -4,8 +4,6 @@ import styled from 'styled-components';
 const All = styled.div`
   margin: 0;
   padding: 0;
-
-
   @media ${device.mobile}{
     overflow: hidden;
   }
@@ -21,34 +19,26 @@ const A = styled.a`
 `;
 
 const ButtonGrimoire = styled.button`
-
 background-color: black;
 border-radius: 30px;
 height: 6vh;
-
 @media ${device.mobile}{
   width : 40vh;
 }
-
 `;
 
 const DivFirstSection1 = styled.div`
-
-  background-image: url(https://images8.alphacoders.com/949/thumb-1920-949830.jpg);
+  background-image: url("/image/banner.jpg");
   height: 90vh;
   background-position: center;
-
-
   @media ${device.mobile}{
-    height :30vh;
+    height :38vh;
     background-position: center;
     background-size: cover;
   }
 `;
 const DivFirstSection2 = styled.div`
-
-
-  background-image: url(https://i.ibb.co/YcwdcWf/Zendikar-Rising-resize.png);
+  background-image: url("/image/Zendikar-Rising-1.png");
   height: 23vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,39 +46,34 @@ const DivFirstSection2 = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
   @media ${device.mobile}{
     display : none
   }
 `;
 
 const DivSecondSection = styled.div`
-  background-image: url(https://i.ibb.co/pQ9gkgW/zendikar-rising.png);
+  background-image: url("/image/zendikar-rising.png");
   height: 100vh;
-
   @media ${device.mobile}{
-    height :30vh;
+    height :35vh;
     background-position: center;
     background-size: cover;
   }
 `;
 
 const DivButton = styled.div`
-
 text-align: center;
 margin-top: 37vh;
-
 @media ${device.mobile}{
  margin-top : 2vh;
 }
-
 `;
 
 const DivTxtHistoire = styled.div`
+  color : white;
   padding-top: 10vh;
   width: 100%;
   text-align: center; 
-
   @media ${device.mobile}{
     padding-top : 3vh
   }
@@ -119,7 +104,8 @@ const MainPage = () => {
   return (
     <All>
       <section>
-        <DivFirstSection1></DivFirstSection1>
+        <DivFirstSection1 ></DivFirstSection1>
+        
         <DivFirstSection2></DivFirstSection2>
       </section>
       <section>

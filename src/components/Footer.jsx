@@ -11,11 +11,12 @@ const A = styled.a`
 `;
 
 const FooterContainer = styled.div`
-  background-color: #262626;
+  background-color: black;
   width: 100wv;
   height: 25vh;
+
   @media ${device.mobile}{
-    height: 15vh;
+    height: 17vh;
   }
 `;
 const Container1 = styled.div`
