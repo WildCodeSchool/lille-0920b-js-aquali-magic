@@ -1,7 +1,7 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
 import Sidebar from "./Sidebar";
-import { BrowserRouter as Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 
 
 const NavigationBar = styled.nav`
@@ -78,7 +78,6 @@ const Navbar = () => {
               id="logo"
             />
           </Link>
-
         <Ul>
           <Li>
             <A to="/histoire">Histoire</A>
