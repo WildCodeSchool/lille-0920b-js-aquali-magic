@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ColorText = styled.div`
-    color: black;
+    color: #1e1e1e;
     background-color: darkgray;
     background-image: url(https://www.wallpapertip.com/wmimgs/34-347031_old-photo-template-photoshop.jpg);
 `
@@ -55,6 +55,12 @@ const Img4 = styled.img`
     grid-row: 1/3;
 `
 
+const Img5 = styled.img`
+    margin-left: 14vw;
+    width: 70vw;
+    height: 60vh;
+`
+
 const Container = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -81,6 +87,7 @@ const Container4 = styled.div`
 
 const Title = styled.h1`
     text-align:center;
+    font-weight: bold;
     font-size: 4em;
     padding-top: 1vh;
     margin: 0;
@@ -131,9 +138,16 @@ const Story = () => {
                     <Text>
                         Jaya et Jodah, 20 ans après la bataille contre Lim-Dûl, retrouvent la main de ce dernier à laquelle il manque l'anneau de Mairsil. Au cours de leur enquête, ils rencontrent Lothar Lovisason, fils de <ImportantText4>Lovisa Froid Regard</ImportantText4>, et son groupe de Buldavians qui fuient la montée des eaux due au réchauffement et les attaques d'un groupe de Kjeldoriens (pourtant leurs alliés dans la guerre contre Lim-Dûl). Jaya, quant à elle, retrouve l'anneau en tant que talisman d'un shamane du groupe. Le groupe d'attaquants était en fait dirigé, non pas par <ImportantText5>Darien, roi du Kjeldor</ImportantText5> mais par <ImportantText4>Vartchaïld, traîtresse du Kjeldor</ImportantText4>. Une fois de plus, Jodah et Jaya permettent la paix entre Kjeldor et Buldavia contre leur ennemi commun dans ce qui va devenir la Nouvelle Argive. Plus tard, <ImportantText>Arcum Dagsson, artificier</ImportantText> qui mène des fouilles sur la Guerre des Frères, présente des <ImportantText5>Bête de guerre phyrexiane</ImportantText5> à Jodah et Jaya. A ce moment, Jaya se révèle être sous l'emprise de l'anneau de Lim-Dûl/Mairsil, poignarde Jodah à mort et utilise son sang (donc celui d'Urza) pour s'emparer des machines. En désespoir de cause, Jodah se réfugie dans son miroir, à raison puisque qu'une apparition de Freyalise lui vient, le soigne et tente de déclencher une Étincelle en lui. En effet, Freyalise en avait décelé la trace près de Jodah et souhaitait à la fois le punir de son mépris envers les planeswalkers et le récompenser de son aide en faisant de lui l'un des leurs, et elle avait donc enchanté le miroir à cette fin. Mais Jodah ne possédait aucune Étincelle en lui. Il retourne donc dans le combat contre Lim-Dûl/Mairsil/Jaya et réalise d'où venait la méprise de Freyalise. L'Etincelle était en fait celle de Jaya. Jodah fracasse donc le miroir sur sa tête, ce qui libère le sort et la transforme en planeswalker. Dans la <ImportantText3>Fournaise immolatrice de Jaya</ImportantText3>, elle est purgée de Lim-Dûl et Mairsil et détruit leurs bêtes phyrexianes.
                     </Text>
-                </Container4>
-                    
+                </Container4>   
             </Container>
+            <Title>La guerre des Planeswalkers(Automne 2018)</Title>
+                <Text>
+                    Conclusion de l'Arc sur Nicol Bolas avec cet événement qui réunit une bonne partie des planeswalkers vivant sur Ravnica pour l'affronter.
+                    Cette édition marque aussi le retour des romans. Le premier d'entre eux se concentrera sur le gros de l'histoire et sera complété par les Magic Story, qui racontent en parallèle le point de vue de Rat, une sans guilde ; et des histoires préquels qui seront écrites en partenariat avec Del Rey et envoyées par mail (en anglais bien sûr), qui suivront le personnage d'Hekara, une Rakdos amie de Rat.
+                    Publier le préquel après le reste est pas l'idée la plus lumineuse de l'année. A l'heure où j'écris, on sait comment finit Bolas mais pas comment <ImportantText4>Niv-Mizzet revenu à la vie est mort</ImportantText4>. Oui, parce qu'il est mort, il fallait déjà le savoir.
+                    Ajoutez à cela le fait que le roman est un échec critique, l'exécution de ce storytelling est en demi-teinte. Mais on ne tardera pas à faire le tri là-dedans et sortir un article clair sur la globalité du set.
+                </Text>
+                <Img5 src="http://www.smfcorp.net/images/artworks/big/15673.jpg" alt="Invasion de la Horde de l'effroi"></Img5>
 
         </ColorText>
     )
