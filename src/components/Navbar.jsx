@@ -2,6 +2,7 @@ import { device } from "./Device.jsx";
 import styled from "styled-components";
 import Sidebar from "./Sidebar";
 import {Link } from "react-router-dom";
+import RechercheBar from "./recherch-bar-rapid/recherche-bar-rapid.jsx";
 
 
 const NavigationBar = styled.nav`
@@ -70,7 +71,6 @@ const Burger = styled.div`
 const Navbar = () => {
   return (
       <NavigationBar>
-
       <Link to="/">
             <Logo
               src="/image/Logo-magic.jpg"
@@ -94,7 +94,10 @@ const Navbar = () => {
           <Li>
             <A to="/booster">Booster</A>
           </Li>
+          <Li>
+          </Li>
         </Ul>
+        <RechercheBar />
         <Burger className="App" id="outer-container">
           <Sidebar
             pageWrapId={"page-wrap"}
