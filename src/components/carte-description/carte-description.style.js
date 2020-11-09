@@ -33,6 +33,7 @@ export const CardContainer = styled.div`
     }
   }
   @media ${device.mobile} {
+    height: 100vh;
   }
 `;
 export const Name = styled.div`
@@ -51,6 +52,8 @@ export const Details = styled.div`
   margin: 30px auto;
   height: 300px;
   @media ${device.mobile} {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 export const Image = styled.div`
@@ -60,6 +63,7 @@ export const Image = styled.div`
   }
 
   @media ${device.mobile} {
+    width: 80%;
   }
 `;
 export const Info = styled.div`
@@ -69,11 +73,12 @@ export const Info = styled.div`
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.7);
   @media ${device.mobile} {
+    width: 80%;
   }
 `;
 export const Mana = styled.div`
-font-size: 16px;
-  
+  font-size: 16px;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -81,7 +86,7 @@ font-size: 16px;
     width: 25px;
   }
   @media ${device.mobile} {
-    
+  }
 `;
 export const Text = styled.div`
   font-size: 14px;

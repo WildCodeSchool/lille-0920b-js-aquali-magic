@@ -19,7 +19,6 @@ class RechercheBar extends React.Component {
     this.setState({ loading: true });
     const res = await axios.get(`https://api.magicthegathering.io/v1/cards?name=${text}`);
     this.setState({ cards: res.data.cards, loading: false });
-    console.log(this.state.cards);
   };
 
   //  clear cards
