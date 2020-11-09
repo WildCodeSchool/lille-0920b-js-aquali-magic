@@ -9,7 +9,9 @@ const Card = ({
 }) => {
   return (
     <CardContainer>
-      <Name>{name}</Name>
+      <Name>
+        <h1>{name}</h1>
+      </Name>
       <Details>
         <Image>
           <img src={imageUrl} alt="card" />
