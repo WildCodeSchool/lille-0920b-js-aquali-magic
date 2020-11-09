@@ -1,10 +1,18 @@
-const CardItem = ({ name, imageUrl, text }) => {
+import { Card, FlipBack, FlipFront } from "./search-rapid/Style-search-bar";
+
+const CardItem = ({ name, imageUrl, text, manaCost }) => {
   return (
-    <div className="card text-center">
-      <img src={imageUrl} alt="card" style={{ width: '6Opx' }} />
-      <h3 className="card-name">{name}</h3>
-      <p className="card-text">{text} </p>
-    </div>
+    <Card>
+      <FlipFront>
+        <img src={imageUrl} alt="card" />
+      </FlipFront>
+
+      <FlipBack className="info">
+        <h1>{name}</h1>
+        <p>{text} </p>
+        <h3>manaCost: {manaCost}</h3>
+      </FlipBack>
+    </Card>
   );
 };
 export default CardItem;
