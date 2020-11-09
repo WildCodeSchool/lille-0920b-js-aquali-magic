@@ -7,6 +7,7 @@ import {
 import MainPage from './components/Main';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Histoire from './components/Histoire';
 
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
     <Router>
     <div>
       <Navbar />
-      <Route path="/" component={MainPage} />
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route path="/histoire" component={Histoire}/>
+      </Switch>
       <div className="container">
       </div>
       <Footer />

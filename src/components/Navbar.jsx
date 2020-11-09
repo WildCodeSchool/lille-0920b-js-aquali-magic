@@ -69,9 +69,9 @@ const Burger = styled.div`
 
 const Navbar = () => {
   return (
-    <Router>
+
       <NavigationBar>
-        <Link to="/">
+
           <A>
             <Logo
               src="/image/Logo-magic.jpg"
@@ -79,7 +79,7 @@ const Navbar = () => {
               id="logo"
             />
           </A>
-        </Link>
+
         <Ul>
           <Li></Li>
           <Li>
@@ -106,10 +106,6 @@ const Navbar = () => {
         </Burger>
       </NavigationBar>
 
-      <Switch>
-        <Route path="/" component={MainPage} />
-      </Switch>
-    </Router>
   );
 };
 
