@@ -98,7 +98,7 @@ const Text = styled.p`
     padding: 0 4vw 0 4vw;
 `
 
-const Story = () => {
+const Histoire = () => {
     return (
         <ColorText>
             <Title>Ere Dominaria (1993-2003)</Title>
@@ -153,4 +153,4 @@ const Story = () => {
     )
 }
 
-export default Story;
+export default Histoire
