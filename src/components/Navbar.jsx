@@ -1,7 +1,7 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
 import Sidebar from "./Sidebar";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 
 const NavigationBar = styled.nav`
@@ -87,10 +87,10 @@ const Navbar = () => {
             <A to="/regles"> Règles</A>
           </Li>
           <Li>
-            <A to="/creation">Cartes </A>
+            <A to="/carte">Cartes </A>
           </Li>
           <Li>
-            <A to="/carte">Créer </A>
+            <A to="/creation">Créer </A>
           </Li>
           <Li>
             <A to="/booster">Booster</A>
