@@ -11,7 +11,6 @@ const NavigationBar = styled.nav`
   border-bottom: 2px solid white;
   display: flex;
   justify-content: space-between;
-
   @media ${device.mobile} {
     height: 10vh;
   }

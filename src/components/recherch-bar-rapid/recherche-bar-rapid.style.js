@@ -37,6 +37,7 @@ export const Result = styled.div`
   height: 150px;
   width: 300px;
   border-bottom: 1px solid #666;
+  cursor:pointer;
   img {
     width: 100%;
     display: inline-block;

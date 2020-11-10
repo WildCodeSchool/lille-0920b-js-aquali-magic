@@ -17,10 +17,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MainPage from "./components/Main";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Card from "./components/carte-description/carte-description";
 
 function App() {
   return (
-
     <div>
       <Navbar />
       <Switch>
@@ -30,12 +30,12 @@ function App() {
         <Route path="/creation" component={Creation}/>
         <Route path="/carte" component={Cartes}/>
         <Route path="/booster" component={Booster}/>
-      </Switch>
+        <Route path="/card/:name" component={Card} />
+    </Switch>
       <div className="container">
       </div>
       <Footer />
     </div>
-
   );
 }
 
