@@ -2,6 +2,7 @@ import { device } from "./Device.jsx";
 import styled from "styled-components";
 import Sidebar from "./Sidebar";
 import {Link } from "react-router-dom";
+import RechercheBar from "./recherch-bar-rapid/recherche-bar-rapid";
 
 
 const NavigationBar = styled.nav`
@@ -102,6 +103,7 @@ const Navbar = () => {
           />
         </Burger>
       </NavigationBar>
+
 
   );
 };
