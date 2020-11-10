@@ -4,7 +4,7 @@ import { Result, Mana } from "./recherche-bar-rapid.style";
 
 const List = ({ name, imageUrl, manaCost, text, history, cmc, type, rarity, artist, clearCards }) => {
   const handleClick = () => {
-    history.push(`/${name}`, {
+    history.push(`/card/${name}`, {
       name,
       imageUrl,
       manaCost,
