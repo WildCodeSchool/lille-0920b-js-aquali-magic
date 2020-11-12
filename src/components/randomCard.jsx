@@ -3,20 +3,26 @@ import axios from "axios";
 
 class RandomCard extends React.Component {
 constructor(props){
-super(props)
+super(props);
+this.state = {
+    cardName : ""
+}
 
 }
     componentDidMount(){
-    const url = 'https://api.magicthegathering.io/v1/cards';
-    axios.get(url)
+    axios
+    .get('https://api.magicthegathering.io/v1/cards')
     .then(({data})=>{
-      console.log(data)  
+      console.log(data.cards[0].name)
+      this.setState({
+          cardName : data.cards[0].name,
+      })  
     })
 }
   render() {
     return( 
     <div>
-        <p>fffzf</p>
+        <p>{this.state.cardName}</p>
     </div>
     );
   }

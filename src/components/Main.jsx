@@ -1,17 +1,17 @@
-import {device} from "./Device.jsx";
-import styled from 'styled-components';
+import { device } from "./Device.jsx";
+import styled from "styled-components";
+import RandomCard from "./randomCard.jsx";
 
 const All = styled.div`
   margin: 0;
   padding: 0;
-  @media ${device.mobile}{
+  @media ${device.mobile} {
     overflow: hidden;
   }
-`
-
+`;
 
 const A = styled.a`
-  color :white;
+  color: white;
   &:hover {
     color: rgb(255, 123, 0);
     transition: 0.5s;
@@ -19,20 +19,20 @@ const A = styled.a`
 `;
 
 const ButtonGrimoire = styled.button`
-background-color: black;
-border-radius: 30px;
-height: 6vh;
-@media ${device.mobile}{
-  width : 40vh;
-}
+  background-color: black;
+  border-radius: 30px;
+  height: 6vh;
+  @media ${device.mobile} {
+    width: 40vh;
+  }
 `;
 
 const DivFirstSection1 = styled.div`
   background-image: url("/image/banner.jpg");
   height: 90vh;
   background-position: center;
-  @media ${device.mobile}{
-    height :38vh;
+  @media ${device.mobile} {
+    height: 38vh;
     background-position: center;
     background-size: cover;
   }
@@ -46,66 +46,68 @@ const DivFirstSection2 = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  @media ${device.mobile}{
-    display : none
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 
 const DivSecondSection = styled.div`
   background-image: url("/image/zendikar-rising.png");
   height: 100vh;
-  @media ${device.mobile}{
-    height :35vh;
+  @media ${device.mobile} {
+    height: 35vh;
     background-position: center;
     background-size: cover;
   }
 `;
 
 const DivButton = styled.div`
-text-align: center;
-margin-top: 37vh;
-@media ${device.mobile}{
- margin-top : 2vh;
-}
+  text-align: center;
+  margin-top: 37vh;
+  @media ${device.mobile} {
+    margin-top: 2vh;
+  }
 `;
 
 const DivTxtHistoire = styled.div`
-  color : white;
+  color: white;
   padding-top: 10vh;
   width: 100%;
-  text-align: center; 
-  @media ${device.mobile}{
-    padding-top : 3vh
+  text-align: center;
+  @media ${device.mobile} {
+    padding-top: 3vh;
   }
 `;
 
 const LiCards = styled.li`
   height: 10vh;
   padding: 10vh 13vh 0 8vh;
-  list-style : none;
-  
-  @media ${device.mobile}{
-    display : none
-    }
+  list-style: none;
+
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 const P = styled.p`
-@media ${device.mobile}{
-  display : none
-}
-`
+  @media ${device.mobile} {
+    display: none;
+  }
+`;
 
 const UlCards = styled.ul`
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 `;
 
 const MainPage = () => {
   return (
     <All>
       <section>
-        <DivFirstSection1 ></DivFirstSection1>
-        
+        <DivFirstSection1>
+          <RandomCard></RandomCard>
+        </DivFirstSection1>
+
         <DivFirstSection2></DivFirstSection2>
       </section>
       <section>
@@ -128,34 +130,30 @@ const MainPage = () => {
           <div>
             <UlCards>
               <LiCards>
-                <img  src ="/image/carte-gauche.png"
-                  
+                <img
+                  src="/image/carte-gauche.png"
                   alt="Carte de la Canalieuse magmatique"
-                 
                 />
               </LiCards>
               <LiCards>
                 <img
-                  src = "/image/carte-milieu.png"
+                  src="/image/carte-milieu.png"
                   alt="Carte de Jace, mage du miroir"
-                 
                 />
               </LiCards>
               <LiCards>
-                <img src = "/image/carte-droite.png"
-                  
+                <img
+                  src="/image/carte-droite.png"
                   alt="Carte du Lac de montagne bouillant"
-                  
                 />
               </LiCards>
             </UlCards>
             <DivButton>
-            <ButtonGrimoire type="button">
-              <A>Ouvrir le grimoire de Zendikar</A>
-            </ButtonGrimoire>
+              <ButtonGrimoire type="button">
+                <A>Ouvrir le grimoire de Zendikar</A>
+              </ButtonGrimoire>
             </DivButton>
           </div>
-          
         </DivSecondSection>
       </section>
     </All>
