@@ -1,9 +1,8 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
 import Sidebar from "./Sidebar";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import RechercheBar from "./recherch-bar-rapid/recherche-bar-rapid";
-
 
 const NavigationBar = styled.nav`
   background-color: black;
@@ -69,41 +68,32 @@ const Burger = styled.div`
 
 const Navbar = () => {
   return (
-      <NavigationBar>
-
+    <NavigationBar>
       <Link to="/">
-            <Logo
-              src="/image/Logo-magic.jpg"
-              alt="Logo du jeu Magic The Gathering"
-              id="logo"
-            />
-          </Link>
-        <Ul>
-          <Li>
-            <A to="/histoire">Histoire</A>
-          </Li>
-          <Li>
-            <A to="/regles"> Règles</A>
-          </Li>
-          <Li>
-            <A to="/carte">Cartes </A>
-          </Li>
-          <Li>
-            <A to="/creation">Créer </A>
-          </Li>
-          <Li>
-            <A to="/booster">Booster</A>
-          </Li>
-        </Ul>
-        <Burger className="App" id="outer-container">
-          <Sidebar
-            pageWrapId={"page-wrap"}
-            outerContainerId={"outer-container"}
-          />
-        </Burger>
-      </NavigationBar>
-
-
+        <Logo src="/image/Logo-magic.jpg" alt="Logo du jeu Magic The Gathering" id="logo" />
+      </Link>
+      <Ul>
+        <Li>
+          <A to="/histoire">Histoire</A>
+        </Li>
+        <Li>
+          <A to="/regles"> Règles</A>
+        </Li>
+        <Li>
+          <A to="/carte">Cartes </A>
+        </Li>
+        <Li>
+          <A to="/creation">Créer </A>
+        </Li>
+        <Li>
+          <A to="/booster">Booster</A>
+        </Li>
+      </Ul>
+      <RechercheBar />
+      <Burger className="App" id="outer-container">
+        <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
+      </Burger>
+    </NavigationBar>
   );
 };
 
