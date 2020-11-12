@@ -29,3 +29,5 @@ this.state = {
 }
 
 export default RandomCard;
+
+//4980 avec cards/id
