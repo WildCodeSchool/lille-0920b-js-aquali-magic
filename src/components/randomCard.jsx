@@ -6,18 +6,23 @@ constructor(props){
 super(props);
 this.state = {
     cardName : "",
+    cardImg : "",
  
 }
 
 }
 
-    componentDidMount(){
+
+    async componentDidMount(){
     axios
     .get('https://api.magicthegathering.io/v1/cards?pageSize=1&random=true')
     .then(({data})=>{
       console.log(data.cards[0].name)
+      console.log(data.cards[0].imageUrl)
       this.setState({
           cardName : data.cards[0].name,
+          cardImg : data.cards[0].imageUrl
+          
       })  
     })
 }
@@ -25,7 +30,7 @@ this.state = {
     return( 
     <div>
         <p>{this.state.cardName}</p>
-        
+        <img src= {this.state.cardImg} alt="Indisponible"/>
     </div>
     );
   }
