@@ -5,7 +5,8 @@ class RandomCard extends React.Component {
 constructor(props){
 super(props);
 this.state = {
-    cardName : ""
+    cardName : "",
+    id : Math.floor(Math.random() * 4980)
 }
 
 }
@@ -23,6 +24,7 @@ this.state = {
     return( 
     <div>
         <p>{this.state.cardName}</p>
+        <p>{this.state.id}</p>
     </div>
     );
   }
