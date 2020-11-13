@@ -70,7 +70,7 @@ const Burger = styled.div`
 const Navbar = () => {
   return (
       <NavigationBar>
-
+        
       <Link to="/">
             <Logo
               src="/image/Logo-magic.jpg"
@@ -95,6 +95,7 @@ const Navbar = () => {
             <A to="/booster">Booster</A>
           </Li>
         </Ul>
+        <RechercheBar />
         <Burger className="App" id="outer-container">
           <Sidebar
             pageWrapId={"page-wrap"}

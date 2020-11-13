@@ -13,10 +13,6 @@ import Cartes from './components/Cartes';
 import Booster from './components/Booster';
 import Creation from './components/Creation';
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MainPage from "./components/Main";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Card from "./components/carte-description/carte-description";
 
 function App() {
