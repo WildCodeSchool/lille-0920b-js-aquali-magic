@@ -7,7 +7,8 @@ super(props);
 this.state = {
     cardName : "",
     cardImg : "",
- 
+    cardAuthor : "",
+    cardYear : ""
 }
 
 }
@@ -20,10 +21,13 @@ this.state = {
     .then(({data})=>{
       console.log(data.cards[0].name)
       console.log(data.cards[0].imageUrl)
+      console.log( data.cards[0].artist)
+      console.log(data.cards[0].rulings[0].date)
       this.setState({
           cardName : data.cards[0].name,
-          cardImg : data.cards[0].imageUrl
-          
+          cardImg : data.cards[0].imageUrl,
+          cardAuthor : data.cards[0].artist,
+          cardYear : data.cards[0].rulings[0].date,
       })  
     })
 
@@ -33,7 +37,11 @@ this.state = {
   render() {
     return( 
     <div>
+      <section>
         <p>{this.state.cardName}</p>
+        <p>{this.state.cardName}</p>
+        <p>{this.state.cardName}</p>
+      </section>
         <img src= {this.state.cardImg} alt="Indisponible"/>
         <button type="button" onClick={this.card}>Découvrir une carte</button>
     </div>
