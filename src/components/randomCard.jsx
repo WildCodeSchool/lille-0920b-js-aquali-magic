@@ -13,7 +13,8 @@ this.state = {
 }
 
 
-    async componentDidMount(){
+  
+    card = async ()=>{
     axios
     .get('https://api.magicthegathering.io/v1/cards?pageSize=1&random=true')
     .then(({data})=>{
@@ -25,12 +26,16 @@ this.state = {
           
       })  
     })
-}
+
+  }
+
+
   render() {
     return( 
     <div>
         <p>{this.state.cardName}</p>
         <img src= {this.state.cardImg} alt="Indisponible"/>
+        <button type="button" onClick={this.card}>Découvrir une carte</button>
     </div>
     );
   }
