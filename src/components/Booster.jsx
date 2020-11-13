@@ -12,34 +12,29 @@ class Booster extends React.Component {
        
     };
 }
-componentDidMount(){
-  axios.get("https://api.magicthegathering.io/v1/sets").then(({data})=>{
-    console.log(data);
-    console.log(data.sets[0].name);
-    console.log(data.sets[0].code);
-    this.setState({ 
-      sets: data.sets
-      
-    
-    });
-  });
-  
-};
 
+
+  
+async componentDidMount() {
+    const res = await axios.get("https://api.magicthegathering.io/v1/sets");
+    this.setState({ sets: res.data.sets });
+    console.log(this.state.sets);
+  }
 
 
   
   render(){
    
     return (
-      <div className="App">
+      <div className="Booster">
         <h1>Liste des extensions pour booster</h1>
-        <div>  
-        <select value={this.state.value} > {this.state.sets.map(set => (   
+        <form>  
+        <select value={this.state.value}> {this.state.sets.map(set => (   
             <option value={set.code}>{set.name}</option>
             ))}  
           </select>
-          </div> 
+          <input type="submit" value="Booster" />
+          </form> 
           
         
       </div>
