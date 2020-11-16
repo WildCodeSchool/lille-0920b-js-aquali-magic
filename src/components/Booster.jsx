@@ -46,6 +46,7 @@ class Booster extends React.Component {
            <select value={code} onChange={this.handleChange} >
               <option selected disabled hidden value="">Select a set to generate booster</option> 
               {sets.map(set => {   
+      
                 {if (!set.booster){
                   return null}
                 }
@@ -56,7 +57,8 @@ class Booster extends React.Component {
         </form>
 <div>
   {cards.map((card)=>{
-    return <img src={card.imageUrl} />
+    
+    return <img src={card.imageUrl} alt=""/>
   })}
 </div>
           
