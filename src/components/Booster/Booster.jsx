@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {flipCardContainer, flipCard, flipCardFront, flipCardBack, Img} from "./Boosterstyled"
 
 
 class Booster extends React.Component {
@@ -50,17 +51,15 @@ class Booster extends React.Component {
                   return null}
                 }
              return <option key={set.id} value={set.code}>{set.name}</option>
-  })}  
+            })}  
            </select>
            <input type="submit" value="BOOSTER" />
         </form>
-<div>
-  {cards.map((card)=>{
-    return <img src={card.imageUrl} />
-  })}
-</div>
-          
-        
+        <div>
+          {cards.map((card)=>{
+          return <img src={card.imageUrl} />
+          })}
+        </div>
       </div>
     );
 

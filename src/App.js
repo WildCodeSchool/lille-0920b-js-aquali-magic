@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import Histoire from './components/Histoire';
 import Regles from './components/Regles';
 import Cartes from './components/Cartes';
-import Booster from './components/Booster';
+import Booster from './components/Booster/Booster';
 import Creation from './components/Creation';
 import "./App.css";
 import Card from "./components/carte-description/carte-description";
