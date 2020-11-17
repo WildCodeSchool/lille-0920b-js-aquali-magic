@@ -47,7 +47,7 @@ const Pbutton = styled.p`
   width: 40vw;
   font-size: 3vh;
   padding-top: 13vh;
-  -webkit-text-stroke: 0.2px black
+  -webkit-text-stroke: 0.2px black;
 `;
 
 const Img = styled.img`
@@ -81,7 +81,7 @@ class RandomCard extends React.Component {
           cardName: data.cards[0].name,
           cardImg: data.cards[0].imageUrl,
           cardAuthor: data.cards[0].artist,
-          cardDisplay : true,
+          cardDisplay: true,
         });
       });
   };
@@ -104,14 +104,17 @@ class RandomCard extends React.Component {
               Découvrir une carte
             </Button>
           </section>
-          {this.state.cardDisplay ? <CardSection>
-            <Img src={this.state.cardImg} alt="Image indisponible" />
-            <section>
-              <P>Nom : {this.state.cardName}</P>
-              <P>Artiste : {this.state.cardAuthor}</P>
-            </section>
-          </CardSection> : ""}
-          
+          {this.state.cardDisplay ? (
+            <CardSection>
+              <Img src={this.state.cardImg} alt="Image indisponible" />
+              <section>
+                <P>Nom : {this.state.cardName}</P>
+                <P>Artiste : {this.state.cardAuthor}</P>
+              </section>
+            </CardSection>
+          ) : (
+            ""
+          )}
         </Div>
       </>
     );
