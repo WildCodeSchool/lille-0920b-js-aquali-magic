@@ -1,44 +1,28 @@
 import styled from "styled-components";
-/*
-export const flipCardContainer = styled.div`
-    width: 300px;
-    height: 400px;
-    perspective: 1000px;
-    &:hover {
-        transform: rotateY(180deg)
-      }
+
+export const Gallery = styled.div`
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2vh;
+    margin-right: 17vh;
+    margin-left: 23vh;
+    padding-bottom: 8vh;   
+
 `
 
-export const flipCard = styled.div`
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-`
-export const flipCardFront = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+export const CallApi = styled.div`
+    text-align: center;
+    margin-bottom: 8vh;
+    color: white
 `
 
-export const flipCardBack = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg);
+export const Title = styled.h1`
+    margin-top: 0;
+    padding-top: 10vh
 `
 
-export const Img = styled.img`
-    width: 100%;
-    height: 100%;
+export const BgImage = styled.div`
+    background-image: url("https://cameronscookware.com/wp-content/uploads/2019/12/magic-the-gathering-wallpaper-hd-fresh-magic-the-gathering-wallpapers-this-week-of-magic-the-gathering-wallpaper-hd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 `
-*/

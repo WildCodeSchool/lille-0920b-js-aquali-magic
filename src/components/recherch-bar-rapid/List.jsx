@@ -2,7 +2,18 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { Result, Mana } from "./recherche-bar-rapid.style";
 
-const List = ({ name, imageUrl, manaCost, text, history, cmc, type, rarity, artist, clearCards }) => {
+const List = ({
+  name,
+  imageUrl,
+  manaCost,
+  text,
+  history,
+  cmc,
+  type,
+  rarity,
+  artist,
+  clearCards,
+}) => {
   const handleClick = () => {
     history.push(`/card/${name}`, {
       name,
