@@ -47,6 +47,7 @@ const Pbutton = styled.p`
   width: 40vw;
   font-size: 3vh;
   padding-top: 13vh;
+  -webkit-text-stroke: 0.2px black
 `;
 
 const Img = styled.img`
