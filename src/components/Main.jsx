@@ -1,6 +1,6 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
-import RandomCard from "./randomCard.jsx";
+import RandomCard from "./random-card/randomCard";
 
 const All = styled.div`
   margin: 0;
@@ -116,13 +116,7 @@ const MainPage = () => {
             <DivTxtHistoire>
               <h1>Une nouvelle aventure commence</h1>
               <P>
-                Plan tumultueux au mana sauvage, à la météorologie instable et
-                aux mystérieux terrains flottants, Zendikar est un monde à la
-                beauté et aux dangers naturels incomparables. <br /> Son paysage
-                est dévasté par des mouvements sismiques explosifs appelés le
-                Roulis dont la violence rend la vie précaire imprévisible et
-                pleine d &apos; aventure. Les fleuves venus d &apos; au-dessus
-                de l &apos; horizon tombent en cascade.
+                Plan tumultueux au mana sauvage, à la météorologie instable et aux mystérieux terrains flottants, Zendikar est un monde à la beauté et aux dangers naturels incomparables. <br /> Son paysage est dévasté par des mouvements sismiques explosifs appelés le Roulis dont la violence rend la vie précaire imprévisible et pleine d &apos; aventure. Les fleuves venus d &apos; au-dessus de l &apos; horizon tombent en cascade.
               </P>
             </DivTxtHistoire>
           </div>
@@ -130,22 +124,13 @@ const MainPage = () => {
           <div>
             <UlCards>
               <LiCards>
-                <img
-                  src="/image/carte-gauche.png"
-                  alt="Carte de la Canalieuse magmatique"
-                />
+                <img src="/image/carte-gauche.png" alt="Carte de la Canalieuse magmatique" />
               </LiCards>
               <LiCards>
-                <img
-                  src="/image/carte-milieu.png"
-                  alt="Carte de Jace, mage du miroir"
-                />
+                <img src="/image/carte-milieu.png" alt="Carte de Jace, mage du miroir" />
               </LiCards>
               <LiCards>
-                <img
-                  src="/image/carte-droite.png"
-                  alt="Carte du Lac de montagne bouillant"
-                />
+                <img src="/image/carte-droite.png" alt="Carte du Lac de montagne bouillant" />
               </LiCards>
             </UlCards>
             <DivButton>
