@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Spinner from "./recherch-bar-rapid/spinner";
 import styled from "styled-components";
 import { device } from "./Device.jsx";
 
@@ -66,54 +67,49 @@ class RandomCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cardName: "",
-      cardImg: "",
-      cardAuthor: "",
-      cardDisplay: false,
+      card: [],
+      loading: false,
     };
   }
 
-  card = async () => {
-    axios
-      .get("https://api.magicthegathering.io/v1/cards?pageSize=1&random=true")
-      .then(({ data }) => {
-        this.setState({
-          cardName: data.cards[0].name,
-          cardImg: data.cards[0].imageUrl,
-          cardAuthor: data.cards[0].artist,
-          cardDisplay: true,
-        });
-      });
+  getCard = async () => {
+    this.setState({ loading: true });
+    const res = await axios.get("https://api.magicthegathering.io/v1/cards?pageSize=1&random=true");
+    this.setState({ card: res.data.cards[0], loading: false });
+    console.log(this.state.card);
+    if (!this.state.card.imageUrl) {
+      this.getCard();
+    }
   };
 
   render() {
+    const { card, loading } = this.state;
     return (
       <>
         <Div>
           <section>
             <Pbutton>
-              Pendant la majeure partie des vingt-six ans d'existence de Magic,
-              l'unité de base de Magic a été le booster. La grande majorité des
-              cartes Magic qui ont été ouvertes proviennent d'un booster.
-              Pendant des années, pour la plupart des joueurs, ouvrir des
-              boosters fut l'essence même des produits Magic. <br />
-              Redécouvrez les cartes qui ont ryhtmé les champs de batailles des
-              Planeswalkers.
+              Pendant la majeure partie des vingt-six ans d'existence de Magic, l'unité de base de Magic a été le booster. La grande majorité des cartes Magic qui ont été ouvertes proviennent d'un booster. Pendant des années, pour la plupart des joueurs, ouvrir des boosters fut l'essence même des produits Magic. <br />
+              Redécouvrez les cartes qui ont ryhtmé les champs de batailles des Planeswalkers.
             </Pbutton>
-            <Button type="button" onClick={this.card}>
+            <Button type="button" onClick={this.getCard}>
               Découvrir une carte
             </Button>
           </section>
-          {this.state.cardDisplay ? (
-            <CardSection>
-              <Img src={this.state.cardImg} alt="Image indisponible" />
-              <section>
-                <P>Nom : {this.state.cardName}</P>
-                <P>Artiste : {this.state.cardAuthor}</P>
-              </section>
-            </CardSection>
+          {loading ? (
+            <Spinner />
           ) : (
-            ""
+            <div>
+              {card.imageUrl ? (
+                <CardSection>
+                  <Img src={card.imageUrl} alt="" />
+                  <section>
+                    <P>Nom : {card.name}</P>
+                    <P>Artiste :{card.artist}</P>
+                  </section>
+                </CardSection>
+              ) : null}
+            </div>
           )}
         </Div>
       </>
