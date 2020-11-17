@@ -5,7 +5,10 @@ import {
   Gallery,
   Title,
   BgImage,
-  CallApi
+  CallApi,
+  SetForm,
+  Select, 
+  Input
 } from "./Boosterstyled";
 
 class Booster extends React.Component {
@@ -53,26 +56,27 @@ class Booster extends React.Component {
       <BgImage>
         <CallApi>
           <Title>List of sets for booster</Title>
-          <form onSubmit={this.handleSubmit}>
-            <select value={code} onChange={this.handleChange}>
-              <option selected disabled hidden value="">
-                Select a set to generate booster
-              </option>
-              {sets.map((set) => {
-                {
-                  if (!set.booster) {
-                    return null;
-                  }
+          <SetForm onSubmit={this.handleSubmit}>
+          <Select value={code} onChange={this.handleChange}>
+            <option selected disabled hidden value="">
+              Select a set to generate booster
+            </option>
+            {sets.map((set) => {
+              {
+                if (!set.booster) {
+                  return null;
                 }
-                return (
-                  <option key={set.id} value={set.code}>
-                    {set.name}
-                  </option>
-                );
+              }
+              return (
+                <option key={set.id} value={set.code}>
+                  {set.name}
+                </option>
+              );
+               
               })}
-            </select>
-            <input type="submit" value="BOOSTER" />
-          </form>
+          </Select>
+            <Input type="submit" value="BOOSTER" />
+          </SetForm>
         </CallApi>
 
         <Gallery>

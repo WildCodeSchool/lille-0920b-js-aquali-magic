@@ -14,7 +14,7 @@ const FooterContainer = styled.div`
   background-color: black;
   width: 100wv;
   height: 25vh;
-
+ 
   @media ${device.mobile} {
     height: 17vh;
   }
