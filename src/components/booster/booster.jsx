@@ -9,6 +9,7 @@ class Booster extends React.Component {
       sets: [],
       code: "",
       cards: [],
+      card: [],
     };
   }
   async componentDidMount() {
@@ -21,8 +22,8 @@ class Booster extends React.Component {
     this.setState({ code: e.target.value });
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
     console.log(this.state.code);
     this.getBooster();
   };
@@ -38,19 +39,24 @@ class Booster extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <select value={code} onChange={this.handleChange}>
-            {sets.map((nm) => {
-              if (!nm.booster) {
+          <select value={code} onChange={this.handleChange} style={{ width: "300px", height: "40px" }}>
+            <option value="" selected disabled hidden>
+              Choose Edition
+            </option>
+            {sets.map((set) => {
+              if (!set.booster) {
                 return null;
               }
-              return <option value={nm.code}> {nm.name} </option>;
+              return <option value={set.code}> {set.name} </option>;
             })}
           </select>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="BOOSTER" />
         </form>
-        {cards.map((card) => {
-          return <BossterCards {...card} />;
-        })}
+        <div style={{ display: "flex", justifyContent: "space-between", flexDirection: "row", flexWrap: "wrap", margin: "40px 40px" }}>
+          {cards.map((card) => {
+            return <BossterCards {...card} />;
+          })}
+        </div>
       </div>
     );
   }
