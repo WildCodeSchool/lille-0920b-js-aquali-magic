@@ -1,7 +1,7 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
 import Booster from "./booster/booster";
-import RandomCard from "./randomCard.jsx";
+import RandomCard from "./random-card/randomCard.jsx";
 
 const All = styled.div`
   margin: 0;
