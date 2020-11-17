@@ -4,8 +4,8 @@ import Spinner from "../recherch-bar-rapid/spinner";
 import { Div, CardSection, Button, Pbutton, Img, Info, Mana, Text, Line } from "./randomCard.style";
 
 class RandomCard extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       card: [],
       loading: false,
