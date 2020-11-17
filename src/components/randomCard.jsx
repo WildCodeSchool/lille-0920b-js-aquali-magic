@@ -70,6 +70,10 @@ const Info = styled.div`
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  h2 {
+    text-align: center;
+    color: orange;
+  }
   @media ${device.mobile} {
     width: 100%;
     height: 380px;
@@ -124,7 +128,7 @@ class RandomCard extends React.Component {
 
   render() {
     const { loading } = this.state;
-    const { imageUrl, manaCost, cmc, type, rarity, artist, text } = this.state.card;
+    const { imageUrl, manaCost, cmc, type, rarity, artist, text, name } = this.state.card;
     return (
       <>
         <Div>
@@ -141,10 +145,11 @@ class RandomCard extends React.Component {
             <Spinner />
           ) : (
             <div>
-              {imageUrl ? (
+              {imageUrl && manaCost ? (
                 <CardSection>
                   <Img src={imageUrl} alt="" />
                   <Info>
+                    <h2>{name}</h2>
                     <Mana>
                       Mana Cost :&nbsp;
                       {manaCost
