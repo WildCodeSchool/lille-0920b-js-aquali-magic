@@ -1,7 +1,8 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
 import Booster from "./booster/booster";
-import RandomCard from "./random";
+import RandomCard from "./randomCard.jsx";
+
 const All = styled.div`
   margin: 0;
   padding: 0;
@@ -106,7 +107,7 @@ const MainPage = () => {
       <Booster />
       <section>
         <DivFirstSection1>
-          <RandomCard />
+          <RandomCard></RandomCard>
         </DivFirstSection1>
 
         <DivFirstSection2></DivFirstSection2>
