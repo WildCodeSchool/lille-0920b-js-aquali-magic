@@ -69,6 +69,7 @@ class RandomCard extends React.Component {
       cardName: "",
       cardImg: "",
       cardAuthor: "",
+      cardDisplay: false,
     };
   }
 
@@ -80,6 +81,7 @@ class RandomCard extends React.Component {
           cardName: data.cards[0].name,
           cardImg: data.cards[0].imageUrl,
           cardAuthor: data.cards[0].artist,
+          cardDisplay : true,
         });
       });
   };
@@ -102,13 +104,14 @@ class RandomCard extends React.Component {
               Découvrir une carte
             </Button>
           </section>
-          <CardSection>
-            <Img src={this.state.cardImg} alt="" />
+          {this.state.cardDisplay ? <CardSection>
+            <Img src={this.state.cardImg} alt="Image indisponible" />
             <section>
               <P>Nom : {this.state.cardName}</P>
-              <P>Artiste :{this.state.cardAuthor}</P>
+              <P>Artiste : {this.state.cardAuthor}</P>
             </section>
-          </CardSection>
+          </CardSection> : ""}
+          
         </Div>
       </>
     );
