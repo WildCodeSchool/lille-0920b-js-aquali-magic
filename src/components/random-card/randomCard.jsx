@@ -30,7 +30,6 @@ class RandomCard extends React.Component {
       "https://api.magicthegathering.io/v1/cards?pageSize=1&random=true"
     );
     this.setState({ card: res.data.cards[0], loading: false });
-    console.log(this.state.card);
     if (!this.state.card.imageUrl || !this.state.card.manaCost) {
       this.getCard();
     }
@@ -81,7 +80,7 @@ class RandomCard extends React.Component {
                         .split(/((?!^)\{.*?\})/)
                         .filter(Boolean)
                         .map((num) => (
-                          <img
+                          <img key={num}
                             src={`/image/mana-icons/${num}.png`}
                             alt="icon"
                           />
