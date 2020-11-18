@@ -1,11 +1,7 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
-<<<<<<< HEAD
 import Booster from "./booster/booster";
 import RandomCard from "./random-card/randomCard.jsx";
-=======
-import RandomCard from "./random-card/randomCard";
->>>>>>> bb161fa656353ff480875e8f7504c5324b7c4062
 
 const All = styled.div`
   margin: 0;
