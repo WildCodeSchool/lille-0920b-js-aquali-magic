@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import { device } from "../Device.jsx";
 
+export const Section = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+`;
+
+export const DivOfCardSection = styled.div`
+  width: 50%;
+`;
+
 export const Div = styled.div`
   display: flex;
   flex-direction: row;
@@ -14,15 +27,13 @@ export const Div = styled.div`
 export const CardSection = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 18vh;
-  margin-left: 10vh;
 `;
 
 export const Button = styled.button`
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin-top: 10vh;
-  margin-left: 19vh;
+  width: 50%;
   padding: 14px 40px;
   border-radius: 7px;
   background-color: black;
@@ -30,6 +41,7 @@ export const Button = styled.button`
   font-weight: bold;
   font-size: 3vh;
   transition-duration: 0.4s;
+  cursor: pointer;
   &:hover {
     background-color: #e04b10;
     color: white;
