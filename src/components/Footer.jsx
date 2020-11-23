@@ -14,7 +14,7 @@ const FooterContainer = styled.div`
   background-color: black;
   width: 100wv;
   height: 25vh;
- 
+  
   @media ${device.mobile} {
     height: 17vh;
   }
@@ -29,6 +29,7 @@ const Container1 = styled.div`
   }
 `;
 const Container3 = styled.div`
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,12 +99,14 @@ const Lieux = styled.div`
 `;
 
 const H4 = styled.h4`
+  color: white;
   font-size: 20px;
   @media ${device.mobile} {
     display: none;
   }
 `;
 const Adresse = styled.div`
+  color: white;
   display: flex;
   flex-direction: column;
   font-size: 14px;

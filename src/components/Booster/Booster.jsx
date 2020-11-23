@@ -33,7 +33,7 @@ class Booster extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state.code);
-    this.getBosster();
+    this.getBooster();
   };
 
   async componentDidMount() {
@@ -42,7 +42,7 @@ class Booster extends React.Component {
     console.log(this.state.sets);
   }
 
-  getBosster = async () => {
+  getBooster = async () => {
     const res = await axios.get(
       `https://api.magicthegathering.io/v1/sets/${this.state.code}/booster`
     );
@@ -59,7 +59,7 @@ class Booster extends React.Component {
           <SetForm onSubmit={this.handleSubmit}>
           <Select value={code} onChange={this.handleChange}>
             <option selected disabled hidden value="">
-              Select a set to generate booster
+            Select a set to generate booster 
             </option>
             {sets.map((set) => {
               {
