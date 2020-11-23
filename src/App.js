@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Histoire from "./components/Histoire";
 import Regles from "./components/Regles";
-import Cartes from "./components/Cartes";
+import Cartes from "./components/cartes/Cartes";
 import Booster from "./components/Booster";
 import Creation from "./components/Creation";
 
