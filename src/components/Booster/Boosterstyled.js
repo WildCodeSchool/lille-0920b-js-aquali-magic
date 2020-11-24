@@ -45,8 +45,6 @@ min-height: 65vh;
   -o-background-size: cover;
   background-size: cover;
 padding-top: 50px; 
-
-
 @media ${device.mobile} {
   min-height: 50vh;
   max-height: 300vh;
@@ -61,6 +59,8 @@ padding-top: 50px;
   background-size: cover;
   padding-bottom: 2px;
   }
+
+
 `  
 export const SetForm = styled.form `
 display:flex;
