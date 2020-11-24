@@ -7,7 +7,6 @@ export const Section = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
-
 `;
 
 export const DivOfCardSection = styled.div`
@@ -24,7 +23,7 @@ export const Div = styled.div`
   padding-top: 10vh;
   @media ${device.mobile} {
     height: 1vh;
-    padding-top :1vh;
+    padding-top: 1vh;
   }
 `;
 
@@ -55,11 +54,9 @@ export const Button = styled.button`
     font-size: 2vh;
     margin-top: 34vh;
     width: 80%;
-    padding: 3px 20px;   
-	  margin-right: 10px;
-
-
-    }
+    padding: 3px 20px;
+    margin-right: 10px;
+  }
 `;
 
 export const Pbutton = styled.p`
@@ -87,7 +84,7 @@ export const Img = styled.img`
     transform: scale(1.3);
   }
   @media ${device.mobile} {
-    width : 65vw;
+    width: 65vw;
     height: 35vh;
   }
 `;
@@ -105,7 +102,6 @@ export const Info = styled.div`
     color: orange;
   }
   @media ${device.mobile} {
- 
     display: none;
   }
 `;
@@ -117,14 +113,11 @@ export const Mana = styled.div`
   img {
     width: 25px;
   }
-
 `;
 export const Text = styled.div`
   font-size: 14px;
   background-color: rgba(248, 163, 6, 0.329);
   padding: 15px;
-
-
 `;
 export const Line = styled.div`
   font-size: 18px;

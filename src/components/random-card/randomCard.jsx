@@ -80,7 +80,8 @@ class RandomCard extends React.Component {
                         .split(/((?!^)\{.*?\})/)
                         .filter(Boolean)
                         .map((num) => (
-                          <img key={num}
+                          <img
+                            key={num}
                             src={`/image/mana-icons/${num}.png`}
                             alt="icon"
                           />
