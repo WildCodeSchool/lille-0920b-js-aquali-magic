@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {device} from "./Device.jsx";
 
 const ColorText = styled.div`
     color: #1e1e1e;
@@ -7,12 +8,6 @@ const ColorText = styled.div`
     background-image: url(https://www.wallpapertip.com/wmimgs/34-347031_old-photo-template-photoshop.jpg);
 `
 
-const Img1 = styled.img`
-    width: 90vw;
-    heigth:10vh;
-    margin-left:4.5vw;
-    padding: 1vh 0 1vh 0;
-`
 const ImportantText = styled.span`
     font-weight: bold;
     color: blue;
@@ -38,32 +33,14 @@ const ImportantText5 = styled.span`
     font-weight: bold;
 `
 
-const Img2 = styled.img`
-margin-left: 25vw;
-padding: 1vh 0 1vh 0;
-`
-
-const Img3 = styled.img`
-    margin-left: 16vw;
-    padding: 1vh 0 1vh 0;
-`
-
-const Img4 = styled.img`
-    margin-left:4vw;
-    dipslay: grid;
-    grid-column: 1/2;
-    grid-row: 1/3;
-`
-
-const Img5 = styled.img`
-    margin-left: 14vw;
-    width: 70vw;
-    height: 60vh;
-`
-
 const Container = styled.div`
     display: grid;
+    margin-left: 5vw;
     grid-template-columns: 2fr 1fr 1fr;
+    @media ${device.mobile}{
+        display: flex;
+
+      }
 `
 
 const Container2 = styled.div`
@@ -98,6 +75,12 @@ const Text = styled.p`
     padding: 0 4vw 0 4vw;
 `
 
+const Center = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
 const Histoire = () => {
     return (
         <ColorText>
@@ -105,7 +88,9 @@ const Histoire = () => {
                 <Text>
                     Les dix premières années de Magic sont centrées sur le plan de Dominaria mais également sur ceux, plus mineurs, de Rajh, d'Ulgothra, du Royaume de Serra et de Mercadia qui tournent autour du premier. La quasi-totalité de l'histoire de cette époque est racontée soit dans des romans, soit directement dans les cartes.
                 </Text>
-                <Img1 src='https://media.wizards.com/2018/images/daily/7UiWFNy1SI_%208TtRE0aGpX.jpg' alt='Carte du monde magic'></Img1>
+                <Center>
+                <img src='https://media.wizards.com/2018/images/daily/7UiWFNy1SI_%208TtRE0aGpX.jpg' alt='Carte du monde magic'></img>
+                </Center>
                 <Text>
                     Avec les premières éditions, nous n'avons pas d'histoire à proprement parler, juste des univers dont on entrevoit l'existence et qui serviront de base aux extensions qui suivront.
                     Pour les éditions de base, elles prennent place un peu partout dans le multivers et il faudra attendre Magic 2013 pour qu'elles soient accompagnées de Magic Story.
@@ -115,11 +100,15 @@ const Histoire = () => {
                     La guerre des frères, ou <ImportantText>La Guerre des Antiquités</ImportantText>, oppose les artificiers <ImportantText>Urza, seigneur grand-artificier</ImportantText>, le premier héro de Magic, à son frère <ImportantText2>Mishra, prodige artificier</ImportantText2>, sur le continent de Terisiare, sur Dominaria. Au terme de la guerre, Urza découvre que son frère a été corrompu par les Phyrexians (une race venue du plan de Phyrexia). Il décide donc d'utiliser le <ImportantText3>Golgothian Sylex</ImportantText3> pour anéantir les deux armées. Au moment où il devrait mourir dans l'explosion, son Étincelle de planeswalker s'embrase, lui offrant des pouvoirs divins et la faculté de voyager entre les plans.
                     La suite de l'histoire d'Urza ne sera racontée que dans le bloc Epopée d'Urza en 98, les extensions suivantes décrivant la suite de l'histoire du plan de Dominaria.
                 </Text>
-                <Img2 src="http://www.smfcorp.net/images/artworks/big/9882.jpg" alt="Urza qui déclenche le sylex et ravage Terisiare alors que son étincelle s'active."></Img2>
+                <Center>
+                <img src="http://www.smfcorp.net/images/artworks/big/9882.jpg" alt="Urza qui déclenche le sylex et ravage Terisiare alors que son étincelle s'active."></img>
+                </Center>
             <Title>The Dark (été 94)</Title>
                 <Text>The Dark explore Dominaria à l'époque qui suit la guerre des Frères (jusqu'à 400 ans après), dans une époque d'obscurantisme et d'obscurité. En effet, <ImportantText3>l'explosion du sylex par Urza</ImportantText3> a créé un nuage qui couvre le ciel, et va bientôt provoquer une ère glaciaire.</Text>
                 <Text>Nous suivons le mage Jodah, un descendant de la femme d'Urza laissée après la guerre. Après une attaque de gobelins, il fuit dans une Fontaine de jouvence, ce qui lui offrira une jeunesse éternelle. Au cours de ses voyages, il est amené à sauver <ImportantText2>Ith, grand arcaniste de Mairsil</ImportantText2>, le prétendant en utilisant un miroir transmis par son maître.</Text>
-                <Img3 src='http://www.smfcorp.net/images/artworks/big/10281.jpg' alt='Jodah, à notre époque.'></Img3>
+                <Center>
+                <img src='http://www.smfcorp.net/images/artworks/big/10281.jpg' alt='Jodah, à notre époque.'></img>
+                </Center>
             <Title>Ère Glaciaire et Alliances (printemps 95 - 96)</Title>
             <Text>
                 Ère glaciaire introduit le paradigme des « blocs », les extensions sortent désormais par 3, une grosse et deux petites, dont l'histoire est continue. Le quatrième set de l'année sera une édition de base.
@@ -127,7 +116,9 @@ const Histoire = () => {
             </Text>
             <Container>
                 <Container2>
-                    <Img4 src="http://www.smfcorp.net/images/artworks/big/9929.jpg" alt="Tapisserie du Temps des glaces représentant, en haut, Darien, roi du Kjeldor et Lovisa Froid Regard, et en bas, Jaya Ballard, mage de force et Jodah, archimage éternel"></Img4>
+                    <Center>
+                    <img src="http://www.smfcorp.net/images/artworks/big/9929.jpg" alt="Tapisserie du Temps des glaces représentant, en haut, Darien, roi du Kjeldor et Lovisa Froid Regard, et en bas, Jaya Ballard, mage de force et Jodah, archimage éternel"></img>
+                    </Center>
                 </Container2>
                 <Container3>
                     <Text>
@@ -147,7 +138,9 @@ const Histoire = () => {
                     Publier le préquel après le reste est pas l'idée la plus lumineuse de l'année. A l'heure où j'écris, on sait comment finit Bolas mais pas comment <ImportantText4>Niv-Mizzet revenu à la vie est mort</ImportantText4>. Oui, parce qu'il est mort, il fallait déjà le savoir.
                     Ajoutez à cela le fait que le roman est un échec critique, l'exécution de ce storytelling est en demi-teinte. Mais on ne tardera pas à faire le tri là-dedans et sortir un article clair sur la globalité du set.
                 </Text>
-                <Img5 src="http://www.smfcorp.net/images/artworks/big/15673.jpg" alt="Invasion de la Horde de l'effroi"></Img5>
+                <div>
+                <img src="http://www.smfcorp.net/images/artworks/big/15673.jpg" alt="Invasion de la Horde de l'effroi"></img>
+                </div>
 
         </ColorText>
     )
