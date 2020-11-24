@@ -119,5 +119,8 @@ color: white;
       color: #001f3f;
       background-color: #fff;
     }
-    
+    @media ${device.mobile} {
+        width: 50vw;
+        margin-left:80px;
+      }   
 `
