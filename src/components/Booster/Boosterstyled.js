@@ -84,7 +84,6 @@ width: 50vw;
 
 export const Input = styled.input`
 color: white;
-    
     margin: 50px 50px;
     transition: all 0.5s ease;
     color: rgba(255, 255, 255, 0.6);

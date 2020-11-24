@@ -39,7 +39,7 @@ class Booster extends React.Component {
   async componentDidMount() {
     const res = await axios.get("https://api.magicthegathering.io/v1/sets");
     this.setState({ sets: res.data.sets });
-    console.log(this.state.sets);
+   
   }
 
   getBosster = async () => {
@@ -92,7 +92,8 @@ class Booster extends React.Component {
                   alt=""
                   onClick={this.handleClick}
                 />
-                <img src={card.imageUrl} alt="" />
+                <img src={card.imageUrl} alt="" 
+                onClick={this.handleClick}/>
 
               </ReactCardFlip>
               </div>
