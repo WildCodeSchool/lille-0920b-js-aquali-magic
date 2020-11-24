@@ -33,9 +33,15 @@ class Booster extends React.Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.code);
     this.getBosster();
+    
   };
+  handleReset = (e) => {
+    e.preventDefault();
+    this.setState({
+      cards: []
+    });
+  }
 
   async componentDidMount() {
     
@@ -101,10 +107,11 @@ class Booster extends React.Component {
                 onClick={this.handleClick}/>
 
               </ReactCardFlip>
-              <button></button>
+              
               </div>
             );
           })}
+          <button onClick={this.handleReset}>Clear</button>
         </Gallery>
         )}
       </BgImage>
