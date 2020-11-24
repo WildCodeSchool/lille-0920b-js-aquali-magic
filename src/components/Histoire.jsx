@@ -39,7 +39,8 @@ const Container = styled.div`
     grid-template-columns: 2fr 1fr 1fr;
     @media ${device.mobile}{
         display: flex;
-
+        flex-direction: column;
+        margin-left:0;
       }
 `
 
@@ -47,67 +48,145 @@ const Container2 = styled.div`
     display: grid;
     grid-column: 1/2;
     grid-row: 1/3;
+    margin: 0;
+    @media ${device.mobile}{
+        display: none;
+      }
 `
 const Container3 = styled.div`
     dispay: grid;
     grid-column: 2/3;
     grid-row: 1/2;
     width: 60vw;
+    height: 15vh;
+    padding-top: 10vh
+    @media ${device.mobile}{
+        display:flex;
+        padding:0;
+      }
 `
 
 const Container4 = styled.div`
     display: grid;
     grid-column: 2/3;
     grid-row; 2/3;
-
+    margin: 0;
+    @media ${device.mobile}{
+        display:flex;
+        padding-top:110vh;
+      }
 `
 
 const Title = styled.h1`
     text-align:center;
     font-weight: bold;
     font-size: 4em;
-    padding-top: 1vh;
     margin: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    @media ${device.mobile}{
+        font-size: 2em;
+    }
+`
+
+const TheTitle = styled.h1`
+    text-align:center;
+    font-weight: bold;
+    font-size: 4em;
+    margin: 0;
+    border-bottom: 2px solid black;
+    @media ${device.mobile}{
+        font-size: 2em;
+    }
 `
 
 const Text = styled.p`
     font-size:1.5em;
-    padding: 0 4vw 0 4vw;
+    padding: 0 1vw 0 1vw;
+    @media ${device.mobile}{
+        font-size: 1.3em;  
+        width: 100vw; 
+    }
 `
 
 const Center = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+padding: 2vh 0 2vh 0;
+`
+
+const ImgMap = styled.img`
+height: 45vw;
+width: 90vw;
+@media ${device.mobile}{
+    height: 75vw;
+    width: 95vw;  
+}
+`
+
+const ImgAntiquites = styled.img `
+height: auto;
+width: auto; 
+@media ${device.mobile}{
+    height: 75vw;
+    width: 95vw;  
+}
+`
+
+const ImgJodah = styled.img `
+height: 25vw;
+width: 35vw; 
+@media ${device.mobile}{
+    height: 75vw;
+    width: 95vw;  
+}
+`
+
+const ImgTapisserie = styled.img `
+height: 65vw;
+width: 35vw; 
+@media ${device.mobile}{
+    display: none;
+}
+`
+
+const ImgInvasion = styled.img`
+height: 50vw;
+width: 80vw;  
+@media ${device.mobile}{
+    height: 75vw;
+    width: 95vw;  
+} 
 `
 
 const Histoire = () => {
     return (
         <ColorText>
-            <Title>Ere Dominaria (1993-2003)</Title>
+            <TheTitle>Ere Dominaria <br></br>(1993-2003)</TheTitle>
                 <Text>
                     Les dix premières années de Magic sont centrées sur le plan de Dominaria mais également sur ceux, plus mineurs, de Rajh, d'Ulgothra, du Royaume de Serra et de Mercadia qui tournent autour du premier. La quasi-totalité de l'histoire de cette époque est racontée soit dans des romans, soit directement dans les cartes.
                 </Text>
                 <Center>
-                <img src='https://media.wizards.com/2018/images/daily/7UiWFNy1SI_%208TtRE0aGpX.jpg' alt='Carte du monde magic'></img>
+                <ImgMap src='https://media.wizards.com/2018/images/daily/7UiWFNy1SI_%208TtRE0aGpX.jpg' alt='Carte du monde magic'></ImgMap>
                 </Center>
                 <Text>
                     Avec les premières éditions, nous n'avons pas d'histoire à proprement parler, juste des univers dont on entrevoit l'existence et qui serviront de base aux extensions qui suivront.
                     Pour les éditions de base, elles prennent place un peu partout dans le multivers et il faudra attendre Magic 2013 pour qu'elles soient accompagnées de Magic Story.
                 </Text>
-            <Title>Antiquities (printemps 94)</Title>
+            <Title>Antiquities <br></br>(printemps 94)</Title>
                 <Text>
                     La guerre des frères, ou <ImportantText>La Guerre des Antiquités</ImportantText>, oppose les artificiers <ImportantText>Urza, seigneur grand-artificier</ImportantText>, le premier héro de Magic, à son frère <ImportantText2>Mishra, prodige artificier</ImportantText2>, sur le continent de Terisiare, sur Dominaria. Au terme de la guerre, Urza découvre que son frère a été corrompu par les Phyrexians (une race venue du plan de Phyrexia). Il décide donc d'utiliser le <ImportantText3>Golgothian Sylex</ImportantText3> pour anéantir les deux armées. Au moment où il devrait mourir dans l'explosion, son Étincelle de planeswalker s'embrase, lui offrant des pouvoirs divins et la faculté de voyager entre les plans.
                     La suite de l'histoire d'Urza ne sera racontée que dans le bloc Epopée d'Urza en 98, les extensions suivantes décrivant la suite de l'histoire du plan de Dominaria.
                 </Text>
                 <Center>
-                <img src="http://www.smfcorp.net/images/artworks/big/9882.jpg" alt="Urza qui déclenche le sylex et ravage Terisiare alors que son étincelle s'active."></img>
+                <ImgAntiquites src="http://www.smfcorp.net/images/artworks/big/9882.jpg" alt="Urza qui déclenche le sylex et ravage Terisiare alors que son étincelle s'active."></ImgAntiquites>
                 </Center>
-            <Title>The Dark (été 94)</Title>
+            <Title>The Dark <br></br>(été 94)</Title>
                 <Text>The Dark explore Dominaria à l'époque qui suit la guerre des Frères (jusqu'à 400 ans après), dans une époque d'obscurantisme et d'obscurité. En effet, <ImportantText3>l'explosion du sylex par Urza</ImportantText3> a créé un nuage qui couvre le ciel, et va bientôt provoquer une ère glaciaire.</Text>
                 <Text>Nous suivons le mage Jodah, un descendant de la femme d'Urza laissée après la guerre. Après une attaque de gobelins, il fuit dans une Fontaine de jouvence, ce qui lui offrira une jeunesse éternelle. Au cours de ses voyages, il est amené à sauver <ImportantText2>Ith, grand arcaniste de Mairsil</ImportantText2>, le prétendant en utilisant un miroir transmis par son maître.</Text>
                 <Center>
-                <img src='http://www.smfcorp.net/images/artworks/big/10281.jpg' alt='Jodah, à notre époque.'></img>
+                <ImgJodah src='http://www.smfcorp.net/images/artworks/big/10281.jpg' alt='Jodah, à notre époque.'></ImgJodah>
                 </Center>
             <Title>Ère Glaciaire et Alliances (printemps 95 - 96)</Title>
             <Text>
@@ -117,7 +196,7 @@ const Histoire = () => {
             <Container>
                 <Container2>
                     <Center>
-                    <img src="http://www.smfcorp.net/images/artworks/big/9929.jpg" alt="Tapisserie du Temps des glaces représentant, en haut, Darien, roi du Kjeldor et Lovisa Froid Regard, et en bas, Jaya Ballard, mage de force et Jodah, archimage éternel"></img>
+                    <ImgTapisserie src="http://www.smfcorp.net/images/artworks/big/9929.jpg" alt="Tapisserie du Temps des glaces représentant, en haut, Darien, roi du Kjeldor et Lovisa Froid Regard, et en bas, Jaya Ballard, mage de force et Jodah, archimage éternel"></ImgTapisserie>
                     </Center>
                 </Container2>
                 <Container3>
@@ -131,16 +210,16 @@ const Histoire = () => {
                     </Text>
                 </Container4>   
             </Container>
-            <Title>La guerre des Planeswalkers(Automne 2018)</Title>
+            <Title>La guerre des Planeswalkers<br></br>(Automne 2018)</Title>
                 <Text>
                     Conclusion de l'Arc sur Nicol Bolas avec cet événement qui réunit une bonne partie des planeswalkers vivant sur Ravnica pour l'affronter.
                     Cette édition marque aussi le retour des romans. Le premier d'entre eux se concentrera sur le gros de l'histoire et sera complété par les Magic Story, qui racontent en parallèle le point de vue de Rat, une sans guilde ; et des histoires préquels qui seront écrites en partenariat avec Del Rey et envoyées par mail (en anglais bien sûr), qui suivront le personnage d'Hekara, une Rakdos amie de Rat.
                     Publier le préquel après le reste est pas l'idée la plus lumineuse de l'année. A l'heure où j'écris, on sait comment finit Bolas mais pas comment <ImportantText4>Niv-Mizzet revenu à la vie est mort</ImportantText4>. Oui, parce qu'il est mort, il fallait déjà le savoir.
                     Ajoutez à cela le fait que le roman est un échec critique, l'exécution de ce storytelling est en demi-teinte. Mais on ne tardera pas à faire le tri là-dedans et sortir un article clair sur la globalité du set.
                 </Text>
-                <div>
-                <img src="http://www.smfcorp.net/images/artworks/big/15673.jpg" alt="Invasion de la Horde de l'effroi"></img>
-                </div>
+                <Center>
+                <ImgInvasion src="http://www.smfcorp.net/images/artworks/big/15673.jpg" alt="Invasion de la Horde de l'effroi"></ImgInvasion>
+                </Center>
 
         </ColorText>
     )
