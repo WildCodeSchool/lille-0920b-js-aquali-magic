@@ -40,8 +40,9 @@ class Cartes extends React.Component {
     return (
       <Main>
         <Form>
+          <h1>The Editions of Magic the Gathering</h1>
           <form onSubmit={this.handleSubmit}>
-            <select value={setName} onChange={this.handleChange} style={{ width: "300px", height: "40px" }}>
+            <select value={setName} onChange={this.handleChange}>
               <option value="" selected disabled hidden>
                 Choose Edition
               </option>
@@ -52,7 +53,7 @@ class Cartes extends React.Component {
                 return <option value={set.name}> {set.name} </option>;
               })}
             </select>
-            <input type="submit" value="BOOSTER" />
+            <input type="submit" value="Show Edition Cards" />
           </form>
         </Form>
 
