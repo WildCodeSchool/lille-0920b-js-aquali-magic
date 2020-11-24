@@ -86,6 +86,7 @@ class Booster extends React.Component {
               })}
           </Select>
             <Input type="submit" value="BOOSTER" />
+            <ButtonClear onClick={this.handleReset}>Clear</ButtonClear>
           </SetForm>
         </CallApi>
         {loading ? (
@@ -112,7 +113,7 @@ class Booster extends React.Component {
               </div>
             );
           })}
-          <div><ButtonClear onClick={this.handleReset}>Clear</ButtonClear></div>
+          
           
         </Gallery>
         )}
