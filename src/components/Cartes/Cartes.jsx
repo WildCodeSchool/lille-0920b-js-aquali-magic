@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Spinner from "../recherch-bar-rapid/spinner";
 import ListCartes from "./listCartes";
 import { ColorsContainer, CardName, Main, Form } from "./Cartes.style";
 
@@ -10,13 +11,13 @@ class Cartes extends React.Component {
       sets: [],
       setName: "",
       cartes: [],
+      loading: false,
     };
   }
 
   async componentDidMount() {
     const res = await axios.get("https://api.magicthegathering.io/v1/sets");
     this.setState({ sets: res.data.sets });
-    console.log(this.state.sets);
   }
 
   handleChange = (e) => {
@@ -25,18 +26,18 @@ class Cartes extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.setName);
+
     this.getCartes();
   };
 
   getCartes = async () => {
+    this.setState({ loading: true });
     const res = await axios.get(`https://api.magicthegathering.io/v1/cards?setName=${this.state.setName}`);
-    this.setState({ cartes: res.data.cards });
-    console.log(this.state.cartes);
+    this.setState({ cartes: res.data.cards, loading: false });
   };
 
   render() {
-    const { sets, setName, cartes } = this.state;
+    const { sets, setName, cartes, loading } = this.state;
     return (
       <Main>
         <Form>
@@ -56,75 +57,78 @@ class Cartes extends React.Component {
             <input type="submit" value="Show Edition Cards" />
           </form>
         </Form>
-
-        <ColorsContainer>
-          <CardName>
-            <img src="/image/G.png" alt="icon" />
-            {cartes.map((carte) => {
-              if (!carte.imageUrl) {
-                return null;
-              }
-              if (carte.colors.length === 1 && carte.colors[0] === "Green") {
-                return <ListCartes {...carte} col={"#006400"} />;
-              }
-            })}
-          </CardName>
-          <CardName>
-            <img src="/image/W.png" alt="icon" />
-            {cartes.map((carte) => {
-              if (!carte.imageUrl) {
-                return null;
-              }
-              if (carte.colors.length === 1 && carte.colors[0] === "White") {
-                return <ListCartes {...carte} col={"#695b49"} />;
-              }
-            })}
-          </CardName>
-          <CardName>
-            <img src="/image/R.png" alt="icon" />
-            {cartes.map((carte) => {
-              if (!carte.imageUrl) {
-                return null;
-              }
-              if (carte.colors.length === 1 && carte.colors[0] === "Red") {
-                return <ListCartes {...carte} col={"#B22222"} />;
-              }
-            })}
-          </CardName>
-          <CardName>
-            <img src="/image/B.png" alt="icon" />
-            {cartes.map((carte) => {
-              if (!carte.imageUrl) {
-                return null;
-              }
-              if (carte.colors.length === 1 && carte.colors[0] === "Black") {
-                return <ListCartes {...carte} col={"black"} />;
-              }
-            })}
-          </CardName>
-          <CardName>
-            <img src="/image/U.png" alt="icon" />
-            {cartes.map((carte) => {
-              if (!carte.imageUrl) {
-                return null;
-              }
-              if (carte.colors.length === 1 && carte.colors[0] === "Blue") {
-                return <ListCartes {...carte} col={"#00008B"} />;
-              }
-            })}
-          </CardName>
-          <CardName>
-            <img src="/image/M.png" alt="icon" />
-            {cartes.map((carte) => {
-              if (!carte.imageUrl) {
-                return null;
-              }
-              if (carte.colors.length > 1) {
-                return <ListCartes {...carte} col={"#8B008B"} />;
-              }
-            })}
-          </CardName>
-        </ColorsContainer>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <ColorsContainer>
+            <CardName>
+              <img src="/image/G.png" alt="icon" />
+              {cartes.map((carte) => {
+                if (!carte.imageUrl) {
+                  return null;
+                }
+                if (carte.colors.length === 1 && carte.colors[0] === "Green") {
+                  return <ListCartes {...carte} col={"#006400"} />;
+                }
+              })}
+            </CardName>
+            <CardName>
+              <img src="/image/W.png" alt="icon" />
+              {cartes.map((carte) => {
+                if (!carte.imageUrl) {
+                  return null;
+                }
+                if (carte.colors.length === 1 && carte.colors[0] === "White") {
+                  return <ListCartes {...carte} col={"#695b49"} />;
+                }
+              })}
+            </CardName>
+            <CardName>
+              <img src="/image/R.png" alt="icon" />
+              {cartes.map((carte) => {
+                if (!carte.imageUrl) {
+                  return null;
+                }
+                if (carte.colors.length === 1 && carte.colors[0] === "Red") {
+                  return <ListCartes {...carte} col={"#B22222"} />;
+                }
+              })}
+            </CardName>
+            <CardName>
+              <img src="/image/B.png" alt="icon" />
+              {cartes.map((carte) => {
+                if (!carte.imageUrl) {
+                  return null;
+                }
+                if (carte.colors.length === 1 && carte.colors[0] === "Black") {
+                  return <ListCartes {...carte} col={"black"} />;
+                }
+              })}
+            </CardName>
+            <CardName>
+              <img src="/image/U.png" alt="icon" />
+              {cartes.map((carte) => {
+                if (!carte.imageUrl) {
+                  return null;
+                }
+                if (carte.colors.length === 1 && carte.colors[0] === "Blue") {
+                  return <ListCartes {...carte} col={"#00008B"} />;
+                }
+              })}
+            </CardName>
+            <CardName>
+              <img src="/image/M.png" alt="icon" />
+              {cartes.map((carte) => {
+                if (!carte.imageUrl) {
+                  return null;
+                }
+                if (carte.colors.length > 1) {
+                  return <ListCartes {...carte} col={"#8B008B"} />;
+                }
+              })}
+            </CardName>
+          </ColorsContainer>
+        )}
       </Main>
     );
   }
