@@ -8,7 +8,12 @@ export const Gallery = styled.div`
     margin-right: 17vh;
     margin-left: 23vh;
     padding-bottom: 8vh; 
-     
+    @media ${device.mobile} {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10vh;
+  
+  } 
 
 `
 
@@ -28,16 +33,35 @@ font-size: 35px;
 `   
 
 export const BgImage = styled.div`
-background-image: url("/image/booster-page.jpg");
+min-height: 65vh;
+  max-height: 300vh;
+  width: 100%;
+  background-image: url("/image/booster-page.jpg");
+  background-position: center center;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 padding-top: 50px; 
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
+
+
 @media ${device.mobile} {
-    height: 70vh;
-    
+  min-height: 50vh;
+  max-height: 300vh;
+  width: 100%;
+  background-image: url("/image/booster-page.jpg");
+  background-position: center center;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 2px;
   }
-`
+`  
 export const SetForm = styled.form `
 display:flex;
 justify-content: space-around;
