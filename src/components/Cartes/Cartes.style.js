@@ -26,7 +26,9 @@ export const Main = styled.div`
 `;
 export const Form = styled.div`
   margin: 5vh auto;
-
+  h1 {
+    font-size: 50px;
+  }
   select {
     width: 100%;
     height: 35px;
@@ -71,13 +73,13 @@ export const Form = styled.div`
   @media ${device.mobile} {
     h1 {
       text-align: center;
-      font-size: 18px;
+      font-size: 24px;
     }
     select {
-      width: 90%;
+      width: 95%;
     }
     input {
-      width: 90%;
+      width: 100%;
     }
   }
 `;
@@ -92,6 +94,7 @@ export const ColorsContainer = styled.div`
 
   @media ${device.mobile} {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -109,7 +112,8 @@ export const CardName = styled.div`
   }
   @media ${device.mobile} {
     width: 80%;
-    marging: 1vh auto;
+    margin: 1vh auto;
+
     img {
       width: 10vw;
     }
@@ -126,5 +130,12 @@ export const Name = styled.p`
   @media ${device.mobile} {
     font-size: 14px;
     height: 6px;
+    padding-left: 5vw;
+  }
+`;
+export const Spin = styled.div`
+  @media ${device.mobile} {
+    width: 100%;
+    margin-left: 24vw;
   }
 `;

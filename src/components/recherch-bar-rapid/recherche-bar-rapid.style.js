@@ -17,6 +17,8 @@ export const SearchContainer = styled.div`
       margin-right: 180px;
       margin-top: 10px;
     }
+    margin: auto;
+    margin-left: 4vw;
   }
 `;
 export const Results = styled.div`
@@ -37,7 +39,7 @@ export const Result = styled.div`
   height: 150px;
   width: 300px;
   border-bottom: 1px solid #666;
-  cursor:pointer;
+  cursor: pointer;
   img {
     width: 100%;
     display: inline-block;
@@ -53,28 +55,28 @@ export const Result = styled.div`
     font-family: "Arial Black", Gadget, sans-serif;
     flex: 1;
   }
-  .card-name{
+  .card-name {
     font-size: 17px;
     font-family: "Arial Black", Gadget, sans-serif;
   }
-  
+
   @media ${device.mobile} {
     height: 25px;
     width: 100%;
     border: 0.5px solid #666;
-    
-  .result-image {
-    display:none;
-    
-  }
-  .result-name {
-    font-size: 12px;
-    text-align: center;
-    font-family: Palatino, URW Palladio L, serif;
-    flex: 1;
-  }
-  .card-name{
-    font-size: 9px;
+
+    .result-image {
+      display: none;
+    }
+    .result-name {
+      font-size: 12px;
+      text-align: center;
+      font-family: Palatino, URW Palladio L, serif;
+      flex: 1;
+    }
+    .card-name {
+      font-size: 9px;
+    }
   }
 `;
 
@@ -90,6 +92,7 @@ export const Input = styled.input`
   left: 30%;
   top: 200px;
   background: transparent;
+  margin: auto 0;
   &:focus {
     outline: none;
   }

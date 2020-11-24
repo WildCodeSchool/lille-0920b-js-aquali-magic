@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import Spinner from "../recherch-bar-rapid/spinner";
 import ListCartes from "./listCartes";
-import { ColorsContainer, CardName, Main, Form } from "./Cartes.style";
+import { ColorsContainer, CardName, Main, Form, Spin } from "./Cartes.style";
 
 class Cartes extends React.Component {
   constructor() {
@@ -41,7 +41,7 @@ class Cartes extends React.Component {
     return (
       <Main>
         <Form>
-          <h1>The Editions of Magic the Gathering</h1>
+          <h1 style={{ fontFamily: "'Oleo Script', cursive" }}>The Editions of Magic the Gathering</h1>
           <form onSubmit={this.handleSubmit}>
             <select value={setName} onChange={this.handleChange}>
               <option value="" selected disabled hidden>
@@ -58,7 +58,9 @@ class Cartes extends React.Component {
           </form>
         </Form>
         {loading ? (
-          <Spinner />
+          <Spin>
+            <Spinner />
+          </Spin>
         ) : (
           <ColorsContainer>
             <CardName>
