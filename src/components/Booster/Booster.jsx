@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import ReactCardFlip from "react-card-flip";
+import Spinner from "/home/wilder/aqualiP2/lille-0920b-js-aquali-magic/src/components/recherch-bar-rapid/spinner.jsx";
 import {
   Gallery,
   Title,
@@ -37,12 +38,14 @@ class Booster extends React.Component {
   };
 
   async componentDidMount() {
+    
     const res = await axios.get("https://api.magicthegathering.io/v1/sets");
     this.setState({ sets: res.data.sets });
    
   }
 
   getBosster = async () => {
+    this.setState({ loading: true });
     const res = await axios.get(
       `https://api.magicthegathering.io/v1/sets/${this.state.code}/booster`
     );
@@ -51,7 +54,7 @@ class Booster extends React.Component {
   };
 
   render() {
-    const { sets, code, cards } = this.state;
+    const { sets, code, cards , loading} = this.state;
     return (
       <BgImage>
         <CallApi>
@@ -78,7 +81,9 @@ class Booster extends React.Component {
             <Input type="submit" value="BOOSTER" />
           </SetForm>
         </CallApi>
-
+        {loading ? (
+          <Spinner />
+        ) : (
         <Gallery>
           {cards.map((card) => {
             return (
@@ -100,6 +105,7 @@ class Booster extends React.Component {
             );
           })}
         </Gallery>
+        )}
       </BgImage>
     );
   }
