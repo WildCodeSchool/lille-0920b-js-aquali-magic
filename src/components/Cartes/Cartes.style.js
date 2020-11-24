@@ -1,17 +1,6 @@
 import styled from "styled-components";
 import { device } from "../Device";
 
-export const Name = styled.p`
-  font-size: 18px;
-  font-weight: bold;
-  height: 8px;
-  cursor: pointer;
-  margin-left: 3vw;
-
-  @media ${device.mobile} {
-  }
-`;
-
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,10 +19,14 @@ export const Main = styled.div`
   background-size: cover;
 
   @media ${device.mobile} {
+    min-height: 150vh;
+    max-height: 500vh;
+    padding-top: 20px;
   }
 `;
 export const Form = styled.div`
   margin: 5vh auto;
+
   select {
     width: 100%;
     height: 35px;
@@ -76,6 +69,16 @@ export const Form = styled.div`
     }
   }
   @media ${device.mobile} {
+    h1 {
+      text-align: center;
+      font-size: 18px;
+    }
+    select {
+      width: 90%;
+    }
+    input {
+      width: 90%;
+    }
   }
 `;
 
@@ -88,6 +91,7 @@ export const ColorsContainer = styled.div`
   padding: 10vh auto;
 
   @media ${device.mobile} {
+    flex-direction: column;
   }
 `;
 
@@ -104,5 +108,23 @@ export const CardName = styled.div`
     margin-right: auto;
   }
   @media ${device.mobile} {
+    width: 80%;
+    marging: 1vh auto;
+    img {
+      width: 10vw;
+    }
+  }
+`;
+
+export const Name = styled.p`
+  font-size: 18px;
+  font-weight: bold;
+  height: 8px;
+  cursor: pointer;
+  margin-left: 3vw;
+
+  @media ${device.mobile} {
+    font-size: 14px;
+    height: 6px;
   }
 `;
