@@ -49,7 +49,7 @@ class Booster extends React.Component {
     const res = await axios.get(
       `https://api.magicthegathering.io/v1/sets/${this.state.code}/booster`
     );
-    this.setState({ cards: res.data.cards });
+    this.setState({ cards: res.data.cards, loading:false });
     console.log(this.state.cards);
   };
 
@@ -101,6 +101,7 @@ class Booster extends React.Component {
                 onClick={this.handleClick}/>
 
               </ReactCardFlip>
+              <button></button>
               </div>
             );
           })}
