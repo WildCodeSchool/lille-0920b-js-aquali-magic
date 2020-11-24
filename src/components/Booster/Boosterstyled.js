@@ -47,7 +47,7 @@ min-height: 65vh;
 padding-top: 50px; 
 @media ${device.mobile} {
   min-height: 50vh;
-  max-height: 300vh;
+  max-height: 700vh;
   width: 100%;
   background-image: url("/image/booster-page.jpg");
   background-position: center center;
