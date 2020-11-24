@@ -103,3 +103,21 @@ color: white;
         margin-left:35px;
       }
 `
+export const ButtonClear = styled.button `
+color: white;
+    margin: 50px 50px;
+    transition: all 0.5s ease;
+    color: rgba(255, 255, 255, 0.6);
+    border: 3px solid #c4c4c4;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 25px;
+    &:hover {
+      color: #001f3f;
+      background-color: #fff;
+    }
+    
+`

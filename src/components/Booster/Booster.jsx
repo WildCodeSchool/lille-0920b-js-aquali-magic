@@ -9,7 +9,8 @@ import {
   CallApi,
   SetForm,
   Select, 
-  Input
+  Input,
+  ButtonClear
 } from "./Boosterstyled";
 
 class Booster extends React.Component {
@@ -111,7 +112,8 @@ class Booster extends React.Component {
               </div>
             );
           })}
-          <button onClick={this.handleReset}>Clear</button>
+          <div><ButtonClear onClick={this.handleReset}>Clear</ButtonClear></div>
+          
         </Gallery>
         )}
       </BgImage>
