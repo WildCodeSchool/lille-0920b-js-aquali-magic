@@ -12,6 +12,9 @@ export const Section = styled.div`
 
 export const DivOfCardSection = styled.div`
   width: 50%;
+  @media ${device.mobile} {
+    width: 60%;
+  }
 `;
 
 export const Div = styled.div`
@@ -20,7 +23,8 @@ export const Div = styled.div`
   justify-content: space-around;
   padding-top: 10vh;
   @media ${device.mobile} {
-    display: none;
+    height: 1vh;
+    padding-top :1vh;
   }
 `;
 
@@ -46,6 +50,16 @@ export const Button = styled.button`
     background-color: #e04b10;
     color: white;
   }
+  @media ${device.mobile} {
+    height: 6vh;
+    font-size: 2vh;
+    margin-top: 34vh;
+    width: 80%;
+    padding: 3px 20px;   
+	  margin-right: 10px;
+
+
+    }
 `;
 
 export const Pbutton = styled.p`
@@ -56,6 +70,9 @@ export const Pbutton = styled.p`
   -webkit-text-stroke: 0.2px black;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 export const Img = styled.img`
@@ -68,6 +85,10 @@ export const Img = styled.img`
   &:hover {
     z-index: 10;
     transform: scale(1.3);
+  }
+  @media ${device.mobile} {
+    width : 65vw;
+    height: 35vh;
   }
 `;
 export const Info = styled.div`
@@ -84,8 +105,8 @@ export const Info = styled.div`
     color: orange;
   }
   @media ${device.mobile} {
-    width: 100%;
-    height: 380px;
+ 
+    display: none;
   }
 `;
 export const Mana = styled.div`
@@ -96,16 +117,14 @@ export const Mana = styled.div`
   img {
     width: 25px;
   }
-  @media ${device.mobile} {
-  }
+
 `;
 export const Text = styled.div`
   font-size: 14px;
   background-color: rgba(248, 163, 6, 0.329);
   padding: 15px;
 
-  @media ${device.mobile} {
-  }
+
 `;
 export const Line = styled.div`
   font-size: 18px;
