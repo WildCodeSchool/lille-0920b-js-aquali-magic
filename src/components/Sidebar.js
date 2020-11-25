@@ -8,14 +8,8 @@ const Slidebar = (props) => {
       <a className="menu-item" href="/histoire">
         Histoire
       </a>
-      <a className="menu-item" href="/">
-        Règles
-      </a>
       <a className="menu-item" href="/carte">
         Cartes
-      </a>
-      <a className="menu-item" href="/">
-        Créer
       </a>
       <a className="menu-item" href="/booster">
         Booster

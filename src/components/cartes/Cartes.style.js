@@ -6,7 +6,7 @@ export const Main = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 120vh;
-  max-height: 300vh;
+  max-height: 2000vh;
   width: 100%;
   padding-top: 50px;
   background-image: url("/image/trans.png");
@@ -136,6 +136,6 @@ export const Name = styled.p`
 export const Spin = styled.div`
   @media ${device.mobile} {
     width: 100%;
-    margin-left: 24vw;
+    margin-left: 90vw;
   }
 `;

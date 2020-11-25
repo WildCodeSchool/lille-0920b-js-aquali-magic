@@ -134,7 +134,7 @@ const MainPage = () => {
               </LiCards>
             </UlCards>
             <DivButton>
-              <ButtonGrimoire type="button">
+              <ButtonGrimoire type="button" to="/carte">
                 <A>Ouvrir le grimoire de Zendikar</A>
               </ButtonGrimoire>
             </DivButton>

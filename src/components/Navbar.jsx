@@ -76,15 +76,11 @@ const Navbar = () => {
         <Li>
           <A to="/histoire">Histoire</A>
         </Li>
-        <Li>
-          <A to="/regles"> Règles</A>
-        </Li>
+
         <Li>
           <A to="/carte">Cartes </A>
         </Li>
-        <Li>
-          <A to="/creation">Créer </A>
-        </Li>
+
         <Li>
           <A to="/booster">Booster</A>
         </Li>

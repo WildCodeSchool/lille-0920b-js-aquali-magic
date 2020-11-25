@@ -14,18 +14,17 @@ class Booster extends React.Component {
       loading: false,
       isFlipped: false,
     };
-    this.handleClick = this.handleClick.bind(this);
   }
-  handleClick(e) {
+  handleClick = (e) => {
     e.preventDefault();
     this.setState((prevState) => ({ isFlipped: !prevState.isFlipped }));
-  }
+  };
   handleChange = (e) => {
     this.setState({ code: e.target.value });
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    this.getBosster();
+    this.getBooster();
   };
   handleReset = (e) => {
     e.preventDefault();
@@ -37,9 +36,10 @@ class Booster extends React.Component {
   async componentDidMount() {
     const res = await axios.get("https://api.magicthegathering.io/v1/sets");
     this.setState({ sets: res.data.sets });
+    console.log(this.state.sets);
   }
 
-  getBosster = async () => {
+  getBooster = async () => {
     this.setState({ loading: true });
     const res = await axios.get(`https://api.magicthegathering.io/v1/sets/${this.state.code}/booster`);
     this.setState({ cards: res.data.cards, loading: false });
