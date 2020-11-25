@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../Device";
 
 export const SearchContainer = styled.div`
-  margin: 20px 30px;
+margin: 1.3vh 1vh 0 0;
   .input-container {
     display: flex;
     flex-direction: row;

@@ -1,4 +1,3 @@
-import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import MainPage from "./components/Main";
 import Navbar from "./components/Navbar";
@@ -6,12 +5,16 @@ import Footer from "./components/Footer";
 import Histoire from "./components/Histoire";
 import Cartes from "./components/cartes/Cartes";
 import Booster from "./components/Booster/Booster";
-
+import styled from "styled-components";
 import Card from "./components/carte-description/carte-description";
+
+const Page = styled.div`
+  margin: -8px;
+`;
 
 function App() {
   return (
-    <div>
+    <Page>
       <Navbar />
       <Switch>
         <Route exact path="/" component={MainPage} />
@@ -22,7 +25,7 @@ function App() {
       </Switch>
       <div className="container"></div>
       <Footer />
-    </div>
+    </Page>
   );
 }
 

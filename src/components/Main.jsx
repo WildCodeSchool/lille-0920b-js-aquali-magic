@@ -1,5 +1,6 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import RandomCard from "./random-card/randomCard.jsx";
 
 const All = styled.div`
@@ -22,6 +23,7 @@ const ButtonGrimoire = styled.button`
   background-color: black;
   border-radius: 30px;
   height: 6vh;
+  cursor: pointer;
   @media ${device.mobile} {
     width: 40vh;
   }
@@ -134,9 +136,11 @@ const MainPage = () => {
               </LiCards>
             </UlCards>
             <DivButton>
-              <ButtonGrimoire type="button" to="/carte">
-                <A>Ouvrir le grimoire de Zendikar</A>
-              </ButtonGrimoire>
+              <Link to="/carte">
+                <ButtonGrimoire type="button">
+                  <A>Ouvrir le grimoire de Zendikar</A>
+                </ButtonGrimoire>
+              </Link>
             </DivButton>
           </div>
         </DivSecondSection>
