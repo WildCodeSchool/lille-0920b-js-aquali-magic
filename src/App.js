@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Histoire from "./components/Histoire";
 import Regles from "./components/Regles";
 import Cartes from "./components/cartes/Cartes";
+import Booster from "./components/Booster/Booster";
 import Creation from "./components/Creation";
 
 import Card from "./components/carte-description/carte-description";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/regles" component={Regles} />
         <Route path="/creation" component={Creation} />
         <Route path="/carte" component={Cartes} />
+        <Route path="/booster" component={Booster} />
         <Route path="/card/:name" component={Card} />
       </Switch>
       <div className="container"></div>

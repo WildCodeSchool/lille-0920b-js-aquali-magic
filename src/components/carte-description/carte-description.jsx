@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CardContainer, Name, Details, Image, Info, Mana, Text, Line } from "./carte-description.style";
+import {
+  CardContainer,
+  Name,
+  Details,
+  Image,
+  Info,
+  Mana,
+  Text,
+  Line,
+} from "./carte-description.style";
 
 const Card = ({
   location: {
