@@ -51,7 +51,7 @@ const Logo = styled.img`
   height: 8vh;
 
   @media ${device.mobile} {
-    width: 20vh;
+    width: 13vh;
     height: 10vh;
   }
 `;

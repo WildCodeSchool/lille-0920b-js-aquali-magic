@@ -17,6 +17,8 @@ export const SearchContainer = styled.div`
       margin-right: 180px;
       margin-top: 10px;
     }
+    margin: auto;
+    margin-left: 4vw;
   }
 `;
 export const Results = styled.div`
@@ -90,6 +92,7 @@ export const Input = styled.input`
   left: 30%;
   top: 200px;
   background: transparent;
+  margin: auto 0;
   &:focus {
     outline: none;
   }
