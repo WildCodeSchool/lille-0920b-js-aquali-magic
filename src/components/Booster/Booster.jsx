@@ -32,14 +32,12 @@ class Booster extends React.Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.code);
     this.getBooster();
   };
 
   async componentDidMount() {
     const res = await axios.get("https://api.magicthegathering.io/v1/sets");
     this.setState({ sets: res.data.sets });
-    console.log(this.state.sets);
   }
 
   getBooster = async () => {
@@ -47,7 +45,6 @@ class Booster extends React.Component {
       `https://api.magicthegathering.io/v1/sets/${this.state.code}/booster`
     );
     this.setState({ cards: res.data.cards });
-    console.log(this.state.cards);
   };
 
   render() {
