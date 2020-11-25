@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import ReactCardFlip from "react-card-flip";
-import Spinner from "/home/wilder/aqualiP2/lille-0920b-js-aquali-magic/src/components/recherch-bar-rapid/spinner.jsx";
+import Spinner from "../recherch-bar-rapid/spinner";
 import {
   Gallery,
   Title,
