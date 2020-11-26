@@ -85,6 +85,7 @@ const Title = styled.h1`
   border-bottom: 2px solid black;
   @media ${device.mobile} {
     font-size: 2em;
+    padding: 0 3vw 0 3vw;
   }
 `;
 
@@ -106,7 +107,7 @@ const Text = styled.p`
 
   @media ${device.mobile} {
     font-size: 1.3em;
-    padding: 0 1vw 0 1vw;
+    padding: 0 5vw 0 5vw;
   }
 `;
 
@@ -193,7 +194,7 @@ const Text1 = styled.p`
   text-align: justify;
   @media ${device.mobile} {
     font-size: 1.3em;
-    padding: 0 1vw 0 1vw;
+    padding: 0 5vw 0 5vw;
   }
 `;
 

@@ -47,6 +47,7 @@ export const Input = styled.input`
   display: flex;
   justify-content: center;
   margin: 30px auto;
+
   border: 3px solid #c4c4c4;
   width: 500px;
   height: 50px;

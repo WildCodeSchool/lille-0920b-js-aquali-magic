@@ -78,6 +78,9 @@ const DivTxtHistoire = styled.div`
   text-align: center;
   @media ${device.mobile} {
     padding-top: 3vh;
+    h1 {
+      padding: 0 3vw 0 3vw;
+    }
   }
 `;
 
