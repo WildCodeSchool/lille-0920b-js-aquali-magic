@@ -3,7 +3,7 @@ import MainPage from "./components/Main";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Histoire from "./components/Histoire";
-import Cartes from "./components/cartes/Cartes";
+import Cartes from "./components/Cartes/Cartes";
 import Booster from "./components/Booster/Booster";
 import styled from "styled-components";
 import Card from "./components/carte-description/carte-description";

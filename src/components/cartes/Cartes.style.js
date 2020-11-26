@@ -6,7 +6,7 @@ export const Main = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 120vh;
-  max-height: 2000vh;
+  max-height: 1000vh;
   width: 100%;
   padding-top: 50px;
   background-image: url("/image/trans.png");
@@ -86,6 +86,7 @@ export const Form = styled.div`
 
 export const ColorsContainer = styled.div`
   width: 80%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,7 +103,7 @@ export const CardName = styled.div`
   width: 28%;
   padding: 5vh auto;
   margin: 2vh 2vw;
-  max-height: 100vh;
+  max-height: 1000vh;
 
   img {
     width: 4vw;

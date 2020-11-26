@@ -13,17 +13,22 @@ const All = styled.div`
 
 const A = styled.a`
   color: white;
+  font-size: 20px;
   &:hover {
     color: rgb(255, 123, 0);
-    transition: 0.5s;
+  }
+  @media ${device.mobile} {
+    font-size: 16px;
   }
 `;
 
 const ButtonGrimoire = styled.button`
   background-color: black;
   border-radius: 30px;
+  width: 16vw;
   height: 6vh;
   cursor: pointer;
+
   @media ${device.mobile} {
     width: 40vh;
   }

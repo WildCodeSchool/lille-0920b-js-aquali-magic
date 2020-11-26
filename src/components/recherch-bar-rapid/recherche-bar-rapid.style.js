@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../Device";
 
 export const SearchContainer = styled.div`
-margin: 1.3vh 1vh 0 0;
+  margin: 1.3vh 1vh 0 0;
   .input-container {
     display: flex;
     flex-direction: row;
@@ -17,8 +17,9 @@ margin: 1.3vh 1vh 0 0;
       margin-right: 180px;
       margin-top: 10px;
     }
-    margin: auto;
-    margin-left: 4vw;
+
+    margin-left: 3.5vw;
+    max-height: 500vh;
   }
 `;
 export const Results = styled.div`
@@ -109,6 +110,7 @@ export const Input = styled.input`
     width: 120px;
     height: 20px;
     font-size: 10px;
+    margin-top: 10px;
   }
 `;
 
@@ -147,18 +149,15 @@ export const Button = styled.button`
 
 //Spinner
 export const Loading = styled.div`
-  width: 50%;
   img {
     width: 50px;
     margin: 40px auto;
     display: block;
   }
   @media ${device.mobile} {
+    margin-right: 50vw;
     img {
       width: 18px;
-      margin-top: 5px;
-      margin-right: 240px;
-      display: block;
     }
   }
 `;
