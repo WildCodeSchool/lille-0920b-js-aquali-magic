@@ -75,8 +75,6 @@ const ReseauxSociaux = styled.div`
     display: flex;
     justify-content: center;
   }
-  
-}
 `;
 
 const Icones = styled.div`

@@ -1,5 +1,7 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
+import RandomCard from "./random-card/randomCard";
+
 
 const All = styled.div`
   margin: 0;
@@ -103,7 +105,10 @@ const MainPage = () => {
   return (
     <All>
       <section>
-        <DivFirstSection1></DivFirstSection1>
+        <DivFirstSection1>
+          <RandomCard></RandomCard>
+        </DivFirstSection1>
+
 
         <DivFirstSection2></DivFirstSection2>
       </section>
@@ -113,13 +118,7 @@ const MainPage = () => {
             <DivTxtHistoire>
               <h1>Une nouvelle aventure commence</h1>
               <P>
-                Plan tumultueux au mana sauvage, à la météorologie instable et
-                aux mystérieux terrains flottants, Zendikar est un monde à la
-                beauté et aux dangers naturels incomparables. <br /> Son paysage
-                est dévasté par des mouvements sismiques explosifs appelés le
-                Roulis dont la violence rend la vie précaire imprévisible et
-                pleine d &apos; aventure. Les fleuves venus d &apos; au-dessus
-                de l &apos; horizon tombent en cascade.
+                Plan tumultueux au mana sauvage, à la météorologie instable et aux mystérieux terrains flottants, Zendikar est un monde à la beauté et aux dangers naturels incomparables. <br /> Son paysage est dévasté par des mouvements sismiques explosifs appelés le Roulis dont la violence rend la vie précaire imprévisible et pleine d &apos; aventure. Les fleuves venus d &apos; au-dessus de l &apos; horizon tombent en cascade.
               </P>
             </DivTxtHistoire>
           </div>

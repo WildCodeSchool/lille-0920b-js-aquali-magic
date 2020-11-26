@@ -37,7 +37,7 @@ export const Result = styled.div`
   height: 150px;
   width: 300px;
   border-bottom: 1px solid #666;
-  cursor:pointer;
+  cursor: pointer;
   img {
     width: 100%;
     display: inline-block;
@@ -53,28 +53,28 @@ export const Result = styled.div`
     font-family: "Arial Black", Gadget, sans-serif;
     flex: 1;
   }
-  .card-name{
+  .card-name {
     font-size: 17px;
     font-family: "Arial Black", Gadget, sans-serif;
   }
-  
+
   @media ${device.mobile} {
     height: 25px;
     width: 100%;
     border: 0.5px solid #666;
-    
-  .result-image {
-    display:none;
-    
-  }
-  .result-name {
-    font-size: 12px;
-    text-align: center;
-    font-family: Palatino, URW Palladio L, serif;
-    flex: 1;
-  }
-  .card-name{
-    font-size: 9px;
+
+    .result-image {
+      display: none;
+    }
+    .result-name {
+      font-size: 12px;
+      text-align: center;
+      font-family: Palatino, URW Palladio L, serif;
+      flex: 1;
+    }
+    .card-name {
+      font-size: 9px;
+    }
   }
 `;
 
@@ -144,6 +144,7 @@ export const Button = styled.button`
 
 //Spinner
 export const Loading = styled.div`
+  width: 50%;
   img {
     width: 50px;
     margin: 40px auto;
@@ -155,6 +156,7 @@ export const Loading = styled.div`
       margin-top: 5px;
       margin-right: 240px;
       display: block;
+    }
   }
 `;
 
@@ -168,6 +170,7 @@ export const Mana = styled.div`
   }
   @media ${device.mobile} {
     img {
-      display:none;
+      display: none;
+    }
   }
 `;
