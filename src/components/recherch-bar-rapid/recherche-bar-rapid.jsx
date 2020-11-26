@@ -3,7 +3,12 @@ import axios from "axios";
 import Spinner from "./spinner";
 import List from "./List";
 
-import { SearchContainer, Results, Input, Button } from "./recherche-bar-rapid.style";
+import {
+  SearchContainer,
+  Results,
+  Input,
+  Button,
+} from "./recherche-bar-rapid.style";
 
 class RechercheBar extends React.Component {
   constructor() {
@@ -17,7 +22,9 @@ class RechercheBar extends React.Component {
 
   search = async (text) => {
     this.setState({ loading: true });
-    const res = await axios.get(`https://api.magicthegathering.io/v1/cards?name=${text}`);
+    const res = await axios.get(
+      `https://api.magicthegathering.io/v1/cards?name=${text}`
+    );
     this.setState({ cards: res.data.cards, loading: false });
   };
 
@@ -47,7 +54,13 @@ class RechercheBar extends React.Component {
             </Button>
           )}
           <form onSubmit={this.onSubmit}>
-            <Input type="text" name="text" placeholder=" Rapid Card Search..." value={text} onChange={this.onChange} />
+            <Input
+              type="text"
+              name="text"
+              placeholder=" Rapid Card Search..."
+              value={text}
+              onChange={this.onChange}
+            />
           </form>
         </div>
         {loading ? (
@@ -59,10 +72,16 @@ class RechercheBar extends React.Component {
                 return i < 5;
               })
               .map((card) => {
-                if (card.foreignNames.length === 0 || !card.imageUrl || !card.manaCost) {
+                if (
+                  card.foreignNames.length === 0 ||
+                  !card.imageUrl ||
+                  !card.manaCost
+                ) {
                   return null;
                 }
-                return <List key={card.id} {...card} clearCards={this.clearCards} />;
+                return (
+                  <List key={card.id} {...card} clearCards={this.clearCards} />
+                );
               })}
           </Results>
         )}

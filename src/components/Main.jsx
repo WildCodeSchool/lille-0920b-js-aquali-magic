@@ -2,6 +2,7 @@ import { device } from "./Device.jsx";
 import styled from "styled-components";
 import RandomCard from "./random-card/randomCard";
 
+
 const All = styled.div`
   margin: 0;
   padding: 0;
@@ -104,9 +105,11 @@ const MainPage = () => {
   return (
     <All>
       <section>
+
         <DivFirstSection1>
           <RandomCard></RandomCard>
         </DivFirstSection1>
+
 
         <DivFirstSection2></DivFirstSection2>
       </section>
@@ -124,6 +127,7 @@ const MainPage = () => {
           <div>
             <UlCards>
               <LiCards>
+
                 <img src="/image/carte-gauche.png" alt="Carte de la Canalieuse magmatique" />
               </LiCards>
               <LiCards>
@@ -131,6 +135,7 @@ const MainPage = () => {
               </LiCards>
               <LiCards>
                 <img src="/image/carte-droite.png" alt="Carte du Lac de montagne bouillant" />
+
               </LiCards>
             </UlCards>
             <DivButton>

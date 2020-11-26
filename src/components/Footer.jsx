@@ -1,9 +1,9 @@
-import {device} from "./Device.jsx";
-import styled from 'styled-components';
+import { device } from "./Device.jsx";
+import styled from "styled-components";
 
 const A = styled.a`
-  color :white;
-  text-decoration:none;
+  color: white;
+  text-decoration: none;
   &:hover {
     color: rgb(255, 123, 0);
     transition: 0.5s;
@@ -15,7 +15,7 @@ const FooterContainer = styled.div`
   width: 100wv;
   height: 25vh;
 
-  @media ${device.mobile}{
+  @media ${device.mobile} {
     height: 17vh;
   }
 `;
@@ -24,10 +24,9 @@ const Container1 = styled.div`
   justify-content: space-around;
   border-bottom: 1px solid white;
   height: 17vh;
-  @media ${device.mobile}{
-    border-bottom:0px;
+  @media ${device.mobile} {
+    border-bottom: 0px;
   }
-  
 `;
 const Container3 = styled.div`
   display: flex;
@@ -37,8 +36,8 @@ const Container3 = styled.div`
   font-size: 12px;
   border-top: 1px solid white;
 
-  @media ${device.mobile}{
-    display : none
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 const Ul = styled.ul`
@@ -48,8 +47,8 @@ const Ul = styled.ul`
   margin: 10px;
   font-size: 14px;
   list-style-type: none;
-  @media ${device.mobile}{
-    display : none
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 const Magic = styled.div`
@@ -59,8 +58,8 @@ const Magic = styled.div`
   align-items: center;
   justify-content: center;
   border-right: 1px solid white;
-  @media ${device.mobile}{
-    display : none
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 
@@ -78,40 +77,36 @@ const ReseauxSociaux = styled.div`
 `;
 
 const Icones = styled.div`
-   width: 80%;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   @media ${device.mobile}{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media ${device.mobile} {
     width: 200%;
-   
-
   }
-
 `;
 const Lieux = styled.div`
   width: 33vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media ${device.mobile}{
-    display : none
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 
 const H4 = styled.h4`
   font-size: 20px;
-  @media ${device.mobile}{
-    display : none
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 const Adresse = styled.div`
-   display: flex;
-   flex-direction: column;
-   font-size: 14px;
-   margin-top: -20px;
-`
-
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-top: -20px;
+`;
 
 const Footer = () => {
   return (
@@ -121,8 +116,10 @@ const Footer = () => {
           <H4>Magic The Gathering</H4>
           <Adresse>
             <A href="https://magic.wizards.com/fr">Magic, site officiel</A>
-            <p>0320437689 <br></br>
-               magic@gmail.com</p>
+            <p>
+              0320437689 <br></br>
+              magic@gmail.com
+            </p>
           </Adresse>
         </Magic>
 
