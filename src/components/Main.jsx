@@ -127,15 +127,16 @@ const MainPage = () => {
           <div>
             <UlCards>
               <LiCards>
-
                 <img src="/image/carte-gauche.png" alt="Carte de la Canalieuse magmatique" />
               </LiCards>
               <LiCards>
-                <img src="/image/carte-milieu.png" alt="Carte de Jace, mage du miroir" />
+                <img
+                  src="/image/carte-milieu.png"
+                  alt="Carte de Jace, mage du miroir"
+                />
               </LiCards>
               <LiCards>
                 <img src="/image/carte-droite.png" alt="Carte du Lac de montagne bouillant" />
-
               </LiCards>
             </UlCards>
             <DivButton>

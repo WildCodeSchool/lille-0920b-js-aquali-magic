@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import ReactCardFlip from "react-card-flip";
 import Spinner from "../recherch-bar-rapid/spinner";
+
 import {
   Gallery,
   Title,
@@ -47,7 +48,6 @@ class Booster extends React.Component {
     const res = await axios.get("https://api.magicthegathering.io/v1/sets");
     this.setState({ sets: res.data.sets });
   }
-
   getBosster = async () => {
     this.setState({ loading: true });
     const res = await axios.get(
@@ -59,6 +59,7 @@ class Booster extends React.Component {
 
   render() {
     const { sets, code, cards, loading } = this.state;
+
     return (
       <BgImage>
         <CallApi>
