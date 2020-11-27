@@ -105,6 +105,7 @@ const MainPage = () => {
   return (
     <All>
       <section>
+
         <DivFirstSection1>
           <RandomCard></RandomCard>
         </DivFirstSection1>
@@ -126,10 +127,7 @@ const MainPage = () => {
           <div>
             <UlCards>
               <LiCards>
-                <img
-                  src="/image/carte-gauche.png"
-                  alt="Carte de la Canalieuse magmatique"
-                />
+                <img src="/image/carte-gauche.png" alt="Carte de la Canalieuse magmatique" />
               </LiCards>
               <LiCards>
                 <img
@@ -138,10 +136,7 @@ const MainPage = () => {
                 />
               </LiCards>
               <LiCards>
-                <img
-                  src="/image/carte-droite.png"
-                  alt="Carte du Lac de montagne bouillant"
-                />
+                <img src="/image/carte-droite.png" alt="Carte du Lac de montagne bouillant" />
               </LiCards>
             </UlCards>
             <DivButton>
