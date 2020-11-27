@@ -119,3 +119,10 @@ export const ButtonClear = styled.button`
     margin-left: 80px;
   }
 `;
+
+export const Spin = styled.div`
+  @media ${device.mobile} {
+    width: 100%;
+    margin-left: 25vw;
+  }
+`;

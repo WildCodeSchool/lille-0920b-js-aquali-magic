@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "./Device.jsx";
+import ScrollUpButton from "react-scroll-up-button";
 
 const ColorText = styled.div`
   color: #1e1e1e;
@@ -201,6 +202,9 @@ const Text1 = styled.p`
 const Histoire = () => {
   return (
     <ColorText>
+      <div>
+        <ScrollUpButton ToggledStyle={{ right: 40 }} />
+      </div>
       <TheTitle>
         Ere Dominaria <br></br>(1993-2003)
       </TheTitle>

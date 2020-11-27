@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Spinner from "../recherch-bar-rapid/spinner";
 import ListCartes from "./listCartes";
+import ScrollUpButton from "react-scroll-up-button";
 import { ColorsContainer, CardName, Main, Form, Spin } from "./Cartes.style";
 
 class Cartes extends React.Component {
@@ -40,6 +41,9 @@ class Cartes extends React.Component {
     const { sets, setName, cartes, loading } = this.state;
     return (
       <Main>
+        <div>
+          <ScrollUpButton ToggledStyle={{ right: 40 }} />
+        </div>
         <Form>
           <h1 style={{ fontFamily: "'Oleo Script', cursive" }}>The Editions of Magic the Gathering</h1>
           <form onSubmit={this.handleSubmit}>

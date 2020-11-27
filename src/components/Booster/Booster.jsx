@@ -1,8 +1,9 @@
 import React from "react";
 import axios from "axios";
 import ReactCardFlip from "react-card-flip";
+import ScrollUpButton from "react-scroll-up-button";
 import Spinner from "../recherch-bar-rapid/spinner";
-import { Gallery, Title, BgImage, CallApi, SetForm, Select, Input, ButtonClear } from "./Boosterstyled";
+import { Gallery, Title, BgImage, CallApi, SetForm, Select, Input, ButtonClear, Spin } from "./Boosterstyled";
 
 class Booster extends React.Component {
   constructor() {
@@ -49,6 +50,9 @@ class Booster extends React.Component {
     const { sets, code, cards, loading } = this.state;
     return (
       <BgImage>
+        <div>
+          <ScrollUpButton ToggledStyle={{ right: 40 }} />
+        </div>
         <CallApi>
           <Title>List of sets for booster</Title>
           <SetForm onSubmit={this.handleSubmit}>
@@ -74,7 +78,9 @@ class Booster extends React.Component {
           </SetForm>
         </CallApi>
         {loading ? (
-          <Spinner />
+          <Spin>
+            <Spinner />
+          </Spin>
         ) : (
           <Gallery>
             {cards.map((card) => {

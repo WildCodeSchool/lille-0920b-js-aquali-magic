@@ -1,6 +1,7 @@
 import { device } from "./Device.jsx";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ScrollUpButton from "react-scroll-up-button";
 import RandomCard from "./random-card/randomCard.jsx";
 
 const All = styled.div`
@@ -113,6 +114,9 @@ const UlCards = styled.ul`
 const MainPage = () => {
   return (
     <All>
+      <div>
+        <ScrollUpButton ToggledStyle={{ right: 40 }} />
+      </div>
       <section>
         <DivFirstSection1>
           <RandomCard></RandomCard>
