@@ -137,6 +137,6 @@ export const Name = styled.p`
 export const Spin = styled.div`
   @media ${device.mobile} {
     width: 100%;
-    margin-left: 90vw;
+    margin-left: 50vw;
   }
 `;
